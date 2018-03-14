@@ -1,0 +1,1 @@
+/Users/sparrow/svndel.sh

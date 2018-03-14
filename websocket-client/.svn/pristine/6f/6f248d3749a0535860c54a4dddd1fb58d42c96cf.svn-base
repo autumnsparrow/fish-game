@@ -1,0 +1,6 @@
+// Spring Shell 1.2.0.M1 log opened at 2016-04-07 10:24:58
+server --uri Bench 
+ws connect --deviceId SYS 
+attachment clear
+attachment create --type Kv --id Sr_0010_01 --value 1 
+mail create --deviceId SYS --title "System Push Message" --content "Mail With Attachment" --category AttachmentMail  --activeTime "2016-04-19 17:00:00" --activeMinutes 1440 

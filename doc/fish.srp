@@ -1,0 +1,2809 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<company>
+  <version>4.0.6</version>
+  <type>1</type>
+  <company-timezone>Asia/Shanghai</company-timezone>
+  <creation-time>1450678885508</creation-time>
+  <company-tax-rate>0.0</company-tax-rate>
+  <company-calendar-id>2</company-calendar-id>
+  <task-field-list/>
+  <resource-field-list/>
+  <client-field-list/>
+  <calendar-list>
+    <calendar>
+      <calendar-type>standard</calendar-type>
+      <calendar-name>Standard</calendar-name>
+      <calendar-id>0</calendar-id>
+      <week-pattern-list>
+        <pattern day-in-week="1">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="2">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="3">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="4">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="5">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="6">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="7">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+      </week-pattern-list>
+      <special-pattern-list/>
+    </calendar>
+    <calendar>
+      <calendar-type>24-hours</calendar-type>
+      <calendar-name>24-hours</calendar-name>
+      <calendar-id>1</calendar-id>
+      <week-pattern-list>
+        <pattern day-in-week="1">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="2">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="3">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="4">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="5">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="6">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="7">
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+      </week-pattern-list>
+      <special-pattern-list/>
+    </calendar>
+    <calendar>
+      <calendar-type>standard</calendar-type>
+      <calendar-name>Fish Calendar</calendar-name>
+      <calendar-id>2</calendar-id>
+      <week-pattern-list>
+        <pattern day-in-week="1">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="2">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="3">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="4">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="5">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="6">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>28800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>28800000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>72000000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>72000000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="7">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+      </week-pattern-list>
+      <special-pattern-list/>
+    </calendar>
+    <calendar>
+      <calendar-type>standard</calendar-type>
+      <calendar-name>Company Calendar</calendar-name>
+      <calendar-id>3</calendar-id>
+      <week-pattern-list>
+        <pattern day-in-week="1">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="2">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>32400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>32400000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="3">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>32400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>32400000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="4">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>32400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>32400000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="5">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>32400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>32400000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="6">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>32400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>32400000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>61200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>61200000</period-start-date>
+            <period-end-date>68400000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>68400000</period-start-date>
+            <period-end-date>79260000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>79260000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+        <pattern day-in-week="7">
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>0</period-start-date>
+            <period-end-date>34200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>34200000</period-start-date>
+            <period-end-date>43200000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>43200000</period-start-date>
+            <period-end-date>46800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>true</period-type>
+            <period-start-date>46800000</period-start-date>
+            <period-end-date>64800000</period-end-date>
+          </period-in-day>
+          <period-in-day>
+            <period-type>false</period-type>
+            <period-start-date>64800000</period-start-date>
+            <period-end-date>86400000</period-end-date>
+          </period-in-day>
+        </pattern>
+      </week-pattern-list>
+      <special-pattern-list/>
+    </calendar>
+  </calendar-list>
+  <resource-list>
+    <human-resource-list>
+      <resource>
+        <resource-id>1</resource-id>
+        <resource-name>芮秋章</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>1</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>1</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>2</resource-calendar-id>
+      </resource>
+      <resource>
+        <resource-id>2</resource-id>
+        <resource-name>董风</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>1</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>1</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>3</resource-calendar-id>
+      </resource>
+      <resource>
+        <resource-id>3</resource-id>
+        <resource-name>赵小飞</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>1</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>1</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>3</resource-calendar-id>
+      </resource>
+      <resource>
+        <resource-id>4</resource-id>
+        <resource-name>张恒全</resource-name>
+        <rate-list>
+          <rate>
+            <rate-id>1</rate-id>
+            <rate-name>Rate 1</rate-name>
+            <rate-std-rate>0.0</rate-std-rate>
+            <rate-ovt-rate>0.0</rate-ovt-rate>
+          </rate>
+        </rate-list>
+        <default-rate>1</default-rate>
+        <resource-max-unit>1.0</resource-max-unit>
+        <resource-type>h</resource-type>
+        <resource-calendar-id>3</resource-calendar-id>
+      </resource>
+    </human-resource-list>
+    <material-resource-list/>
+    <cost-resource-list/>
+  </resource-list>
+  <client-list/>
+  <task>
+    <project>true</project>
+    <pattern>
+      <period-in-day>
+        <period-type>false</period-type>
+        <period-start-date>0</period-start-date>
+        <period-end-date>28800000</period-end-date>
+      </period-in-day>
+      <period-in-day>
+        <period-type>true</period-type>
+        <period-start-date>28800000</period-start-date>
+        <period-end-date>43200000</period-end-date>
+      </period-in-day>
+      <period-in-day>
+        <period-type>false</period-type>
+        <period-start-date>43200000</period-start-date>
+        <period-end-date>86400000</period-end-date>
+      </period-in-day>
+    </pattern>
+    <default-forced-working>false</default-forced-working>
+    <default-work-driven>false</default-work-driven>
+    <default-fixed-units>true</default-fixed-units>
+    <task-status>Planning</task-status>
+    <project-manager>芮秋章</project-manager>
+    <project-code>FS-001</project-code>
+    <project-budget>0.0</project-budget>
+    <project-description>项目主要范围:
+1.全民钓鱼软件客户端支付渠道接入. [2016-01-15前完成]
+2.全民钓鱼网络(弱联网)服务器协议及实现.
+	2.1 水族箱
+	2.2 商店
+	2.3背包
+	2.4宝箱
+	2.5图鉴
+	2.6成就系统
+	2.7任务系统
+	2.8支付系统
+	2.9资源更新[2016-01-15前完成]
+	2.10用户登录注册
+	2.11钓鱼系统[2016-01-15前完成网络存档]
+	2.12签到系统
+	2.13兑换系统[2016-01-15前完成]
+	2.14好友系统[2016-01-15前完成]
+	2.15邮箱系统
+	2.16排行系统[2016-01-15前完成]
+3.全民钓鱼服务器端分布系统开发.
+	3.1 websocket路由功能实现
+	3.2 存储路由功能实现
+	3.3 分布系统实时监控
+	3.4分布系统实时管理
+	3.5分布系统配置管理
+	3.6分布系统性能优化.
+4.全民钓鱼服务端管理平台开发.
+	4.1 对2中功能模块管理平台功能.(2.1~2.16) [2016年-01-15前完成兑换,排行,好友,钓鱼,资源更新,管理平台]
+	4.2 数据统计(目前未确定)
+	4.3 游戏管理(GM ,目前未确定具体功能)
+5.全民钓鱼客户端网络层优化.
+</project-description>
+    <project-assumptions/>
+    <project-constraints/>
+    <project-baseline-list/>
+    <project-critical-slack-limit>1</project-critical-slack-limit>
+    <project-critical-slack-unit>d</project-critical-slack-unit>
+    <units-duration>
+      <default-unit>d</default-unit>
+      <default-work-unit>h</default-work-unit>
+      <y>6912000000</y>
+      <mo>576000000</mo>
+      <w>144000000</w>
+      <d>28800000</d>
+      <h>3600000</h>
+      <m>60000</m>
+    </units-duration>
+    <task-name>全民钓鱼服务器端</task-name>
+    <task-id>0</task-id>
+    <expanded-gantt>true</expanded-gantt>
+    <task-currency-unit>$</task-currency-unit>
+    <task-accrual>accrual-prorated</task-accrual>
+    <task-calendar-id>2</task-calendar-id>
+    <task-constraint>
+      <snet>21-12-2015, 08:00:00</snet>
+    </task-constraint>
+    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+    <task-end-date>13-01-2016, 17:00:00</task-end-date>
+    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+    <task-duration>641820000</task-duration>
+    <task-notes>&lt;ol&gt;
+      &lt;li&gt;
+        &amp;#35745;&amp;#21010;&amp;#20197;2016&amp;#24180;1&amp;#26376;15&amp;#26085;&amp;#20026;&amp;#20998;&amp;#21106;&amp;#32447;.2016&amp;#24180;1&amp;#26376;15&amp;#26085;&amp;#21069;&amp;#23436;&amp;#25104;[&amp;#33539;&amp;#22260;,&amp;#35265;info]&amp;#26631;&amp;#35760;&amp;#38656;&amp;#35201;&amp;#23436;&amp;#25104;&amp;#21151;&amp;#33021;.
+      &lt;/li&gt;
+      &lt;li&gt;
+        2016&amp;#24180;3&amp;#26376;15&amp;#26085;&amp;#23436;&amp;#25104;&amp;#21327;&amp;#35758;[&amp;#33539;&amp;#22260;,&amp;#35265;info]&amp;#20869;&amp;#25152;&amp;#21015;&amp;#24050;&amp;#26126;&amp;#30830;&amp;#21151;&amp;#33021;&amp;#24320;&amp;#21457;&amp;#21450;&amp;#27979;&amp;#35797;.
+      &lt;/li&gt;
+    &lt;/ol&gt;</task-notes>
+    <task-look>
+      <use-bar-color>false</use-bar-color>
+    </task-look>
+    <task-list>
+      <task>
+        <task-name>全民钓鱼网络(弱联网)服务器协议</task-name>
+        <task-id>1</task-id>
+        <task-unit>h</task-unit>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <task>
+            <task-name>水族箱</task-name>
+            <task-id>2</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>商店</task-name>
+            <task-id>3</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>背包</task-name>
+            <task-id>4</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>图鉴</task-name>
+            <task-id>5</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-unit>h</task-unit>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>任务系统</task-name>
+            <task-id>6</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>成就系统</task-name>
+            <task-id>7</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>资源更新</task-name>
+            <task-id>8</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>支付系统</task-name>
+            <task-id>9</task-id>
+            <task-unit>h</task-unit>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>安智支付接入</task-name>
+                <task-id>10</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>服务器端与客户端接口开发</task-name>
+                    <task-id>11</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器与客户端接口测试</task-name>
+                    <task-id>12</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器端与支付服务器接口开发及逻辑处理</task-name>
+                    <task-id>13</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <task>
+            <task-name>用户登录注册</task-name>
+            <task-id>14</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>钓鱼系统</task-name>
+            <task-id>15</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>签到系统</task-name>
+            <task-id>16</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>兑换系统</task-name>
+            <task-id>17</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>好友系统</task-name>
+            <task-id>18</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>邮箱系统</task-name>
+            <task-id>19</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>排行系统</task-name>
+            <task-id>20</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+        </task-list>
+      </task>
+      <empty-task>
+        <task-id>21</task-id>
+      </empty-task>
+      <task>
+        <task-name>全民钓鱼客户端</task-name>
+        <task-id>22</task-id>
+        <task-unit>h</task-unit>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <task>
+            <task-name>全民钓鱼客户端支付渠道接入</task-name>
+            <task-id>23</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-unit>h</task-unit>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>安智支付接入</task-name>
+                <task-id>24</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>客户端支付sdk plugin接入</task-name>
+                    <task-id>25</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端unity script接入</task-name>
+                    <task-id>26</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端与服务器接口开发</task-name>
+                    <task-id>27</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端与服务器接口测试</task-name>
+                    <task-id>28</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+        </task-list>
+      </task>
+      <task>
+        <task-name>全民钓鱼网络层优化</task-name>
+        <task-id>29</task-id>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+      </task>
+      <empty-task>
+        <task-id>30</task-id>
+      </empty-task>
+      <task>
+        <task-name>全民钓鱼服务器端分布式开发</task-name>
+        <task-id>31</task-id>
+        <task-unit>h</task-unit>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <task>
+            <task-name> websocket路由功能实现</task-name>
+            <task-id>32</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>存储路由功能实现</task-name>
+            <task-id>33</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>分布系统实时监控</task-name>
+            <task-id>34</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>分布系统实时管理</task-name>
+            <task-id>35</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>分布系统配置管理</task-name>
+            <task-id>36</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>分布系统性能优化</task-name>
+            <task-id>37</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+        </task-list>
+      </task>
+      <empty-task>
+        <task-id>38</task-id>
+      </empty-task>
+      <task>
+        <task-name>全民钓鱼服务端管理平台开发</task-name>
+        <task-id>39</task-id>
+        <task-unit>h</task-unit>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <task>
+            <task-name>游戏功能模块管理</task-name>
+            <task-id>40</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-unit>h</task-unit>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>排行系统</task-name>
+                <task-id>41</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>邮箱系统</task-name>
+                <task-id>42</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>好友系统</task-name>
+                <task-id>43</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>兑换系统</task-name>
+                <task-id>44</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>签到系统</task-name>
+                <task-id>45</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>钓鱼系统</task-name>
+                <task-id>46</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>用户登录注册</task-name>
+                <task-id>47</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>支付系统</task-name>
+                <task-id>48</task-id>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>资源更新</task-name>
+                <task-id>49</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>成就系统</task-name>
+                <task-id>50</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>任务系统</task-name>
+                <task-id>51</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>图鉴</task-name>
+                <task-id>52</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>背包</task-name>
+                <task-id>53</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>商店</task-name>
+                <task-id>54</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>水族箱系统</task-name>
+                <task-id>55</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+            </task-list>
+          </task>
+          <task>
+            <task-name>游戏统计功能</task-name>
+            <task-id>56</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>游戏管理(GM)</task-name>
+            <task-id>57</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+        </task-list>
+      </task>
+      <empty-task>
+        <task-id>58</task-id>
+      </empty-task>
+      <empty-task>
+        <task-id>59</task-id>
+      </empty-task>
+      <task>
+        <task-name>2016年1月15日前计划</task-name>
+        <task-id>60</task-id>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>13-01-2016, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>641820000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <empty-task>
+            <task-id>61</task-id>
+          </empty-task>
+          <task>
+            <task-name>支付系统</task-name>
+            <task-id>62</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>23-12-2015, 22:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>108120000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>安智支付接入服务器端</task-name>
+                <task-id>63</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>23-12-2015, 22:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>108120000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>服务器端与支付服务器接口开发及逻辑处理</task-name>
+                    <task-id>64</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器端与客户端接口开发</task-name>
+                    <task-id>65</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>22-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>22-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>22-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器与客户端接口测试</task-name>
+                    <task-id>66</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>23-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>23-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>23-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>23-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>安智支付接入客户端</task-name>
+                <task-id>67</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>23-12-2015, 22:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>108120000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>客户端支付sdk plugin接入</task-name>
+                    <task-id>68</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-work-duration>32400000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端unity script接入</task-name>
+                    <task-id>69</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>22-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>22-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>22-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-work-duration>32400000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端与服务器接口开发</task-name>
+                    <task-id>70</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>22-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>22-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>22-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-work-duration>32400000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端与服务器接口测试</task-name>
+                    <task-id>71</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>23-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>23-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>23-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>23-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-work-duration>32400000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>72</task-id>
+          </empty-task>
+          <task>
+            <task-name>钓鱼系统 </task-name>
+            <task-id>73</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>28-12-2015, 22:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>216300000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>需求确定</task-name>
+                <task-id>74</task-id>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-constraint>
+                  <snet>23-12-2015, 20:00:00</snet>
+                </task-constraint>
+                <task-start-date>23-12-2015, 20:00:00</task-start-date>
+                <task-end-date>23-12-2015, 22:01:00</task-end-date>
+                <task-completion-date>23-12-2015, 20:00:00</task-completion-date>
+                <task-duration>7260000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+              </task>
+              <task>
+                <task-name>服务器</task-name>
+                <task-id>75</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>24-12-2015, 08:00:00</task-start-date>
+                <task-end-date>28-12-2015, 22:00:00</task-end-date>
+                <task-completion-date>24-12-2015, 08:00:00</task-completion-date>
+                <task-duration>108120000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及逻辑</task-name>
+                    <task-id>76</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>24-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>24-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>24-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>24-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器测试</task-name>
+                    <task-id>77</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>25-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>25-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>25-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>25-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>联调</task-name>
+                    <task-id>78</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>28-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>28-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>28-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>28-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>客户端</task-name>
+                <task-id>79</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及客户端逻辑</task-name>
+                    <task-id>80</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>与服务器联调</task-name>
+                    <task-id>81</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端测试</task-name>
+                    <task-id>82</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>管理平台</task-name>
+                <task-id>83</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>明确管理平台需求</task-name>
+                    <task-id>84</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>开发</task-name>
+                    <task-id>85</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>测试</task-name>
+                    <task-id>86</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>87</task-id>
+          </empty-task>
+          <task>
+            <task-name>兑换系统 </task-name>
+            <task-id>88</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>22-12-2015, 08:00:00</task-start-date>
+            <task-end-date>25-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+            <task-duration>136980000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>管理平台</task-name>
+                <task-id>89</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>22-12-2015, 08:00:00</task-start-date>
+                <task-end-date>25-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+                <task-duration>136980000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>分析管理平台需求</task-name>
+                    <task-id>90</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>22-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>22-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>22-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>22-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>36000000</task-duration>
+                    <task-work-duration>68400000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>开发</task-name>
+                    <task-id>91</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-constraint>
+                      <snet>23-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>23-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>24-12-2015, 22:00:00</task-end-date>
+                    <task-completion-date>23-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>72060000</task-duration>
+                    <task-work-duration>136920000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>测试</task-name>
+                    <task-id>92</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-constraint>
+                      <snet>25-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>25-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>25-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>25-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-work-duration>54000000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>93</task-id>
+          </empty-task>
+          <task>
+            <task-name>资源更新</task-name>
+            <task-id>94</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>28-12-2015, 08:00:00</task-start-date>
+            <task-end-date>04-01-2016, 17:00:00</task-end-date>
+            <task-completion-date>28-12-2015, 08:00:00</task-completion-date>
+            <task-duration>209100000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>管理平台</task-name>
+                <task-id>95</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>28-12-2015, 08:00:00</task-start-date>
+                <task-end-date>04-01-2016, 17:00:00</task-end-date>
+                <task-completion-date>28-12-2015, 08:00:00</task-completion-date>
+                <task-duration>209100000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>确定管理平台需求</task-name>
+                    <task-id>96</task-id>
+                    <task-unit>h</task-unit>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-constraint>
+                      <snet>28-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>28-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>28-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>28-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-work-duration>54000000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>开发</task-name>
+                    <task-id>97</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-calendar-id>2</task-calendar-id>
+                    <task-constraint>
+                      <snet>29-12-2015, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>29-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>31-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>29-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>100920000</task-duration>
+                    <task-work-duration>191040000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>测试</task-name>
+                    <task-id>98</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>04-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>04-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>04-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>04-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-work-duration>25200000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>99</task-id>
+          </empty-task>
+          <task>
+            <task-name>好友系统 </task-name>
+            <task-id>100</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>07-01-2016, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>497580000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>服务器</task-name>
+                <task-id>101</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>04-01-2016, 08:00:00</task-start-date>
+                <task-end-date>07-01-2016, 17:00:00</task-end-date>
+                <task-completion-date>04-01-2016, 08:00:00</task-completion-date>
+                <task-duration>136980000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及逻辑</task-name>
+                    <task-id>102</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>04-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>04-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>05-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>04-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>64860000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器测试</task-name>
+                    <task-id>103</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>06-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>06-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>06-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>06-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>联调</task-name>
+                    <task-id>104</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>07-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>07-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>07-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>07-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>客户端</task-name>
+                <task-id>105</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及客户端逻辑</task-name>
+                    <task-id>106</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>与服务器联调</task-name>
+                    <task-id>107</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端测试</task-name>
+                    <task-id>108</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>管理平台</task-name>
+                <task-id>109</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>明确管理平台需求</task-name>
+                    <task-id>110</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>开发</task-name>
+                    <task-id>111</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>测试</task-name>
+                    <task-id>112</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+          <empty-task>
+            <task-id>113</task-id>
+          </empty-task>
+          <task>
+            <task-name>排行系统</task-name>
+            <task-id>114</task-id>
+            <expanded-gantt>true</expanded-gantt>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>13-01-2016, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>641820000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+            <task-list>
+              <task>
+                <task-name>管理平台</task-name>
+                <task-id>115</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>明确管理平台需求</task-name>
+                    <task-id>116</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>开发</task-name>
+                    <task-id>117</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>测试</task-name>
+                    <task-id>118</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>客户端</task-name>
+                <task-id>119</task-id>
+                <task-unit>h</task-unit>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                <task-duration>28800000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及客户端逻辑</task-name>
+                    <task-id>120</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>与服务器联调</task-name>
+                    <task-id>121</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>客户端测试</task-name>
+                    <task-id>122</task-id>
+                    <expanded-gantt>true</expanded-gantt>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-start-date>21-12-2015, 08:00:00</task-start-date>
+                    <task-end-date>21-12-2015, 17:00:00</task-end-date>
+                    <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+              <task>
+                <task-name>服务器</task-name>
+                <task-id>123</task-id>
+                <expanded-gantt>true</expanded-gantt>
+                <task-currency-unit>$</task-currency-unit>
+                <task-accrual>accrual-prorated</task-accrual>
+                <task-start-date>08-01-2016, 08:00:00</task-start-date>
+                <task-end-date>13-01-2016, 17:00:00</task-end-date>
+                <task-completion-date>08-01-2016, 08:00:00</task-completion-date>
+                <task-duration>136980000</task-duration>
+                <task-look>
+                  <use-bar-color>false</use-bar-color>
+                </task-look>
+                <task-list>
+                  <task>
+                    <task-name>实现协议接口及逻辑</task-name>
+                    <task-id>124</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>08-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>08-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>11-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>08-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>64860000</task-duration>
+                    <task-work-duration>64860000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>服务器测试</task-name>
+                    <task-id>125</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>12-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>12-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>12-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>12-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-work-duration>28800000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                  <task>
+                    <task-name>联调</task-name>
+                    <task-id>126</task-id>
+                    <task-currency-unit>$</task-currency-unit>
+                    <task-accrual>accrual-prorated</task-accrual>
+                    <task-constraint>
+                      <snet>13-01-2016, 08:00:00</snet>
+                    </task-constraint>
+                    <task-start-date>13-01-2016, 08:00:00</task-start-date>
+                    <task-end-date>13-01-2016, 17:00:00</task-end-date>
+                    <task-completion-date>13-01-2016, 08:00:00</task-completion-date>
+                    <task-duration>28800000</task-duration>
+                    <task-work-duration>28800000</task-work-duration>
+                    <task-look>
+                      <use-bar-color>false</use-bar-color>
+                    </task-look>
+                  </task>
+                </task-list>
+              </task>
+            </task-list>
+          </task>
+        </task-list>
+      </task>
+      <empty-task>
+        <task-id>127</task-id>
+      </empty-task>
+      <empty-task>
+        <task-id>128</task-id>
+      </empty-task>
+      <task>
+        <task-name>2016年1月15日至2016年2月15日工作计划</task-name>
+        <task-id>129</task-id>
+        <expanded-gantt>true</expanded-gantt>
+        <task-unit>h</task-unit>
+        <task-currency-unit>$</task-currency-unit>
+        <task-accrual>accrual-prorated</task-accrual>
+        <task-start-date>21-12-2015, 08:00:00</task-start-date>
+        <task-end-date>21-12-2015, 17:00:00</task-end-date>
+        <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+        <task-duration>28800000</task-duration>
+        <task-look>
+          <use-bar-color>false</use-bar-color>
+        </task-look>
+        <task-list>
+          <task>
+            <task-name>成就系统</task-name>
+            <task-id>130</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>任务系统</task-name>
+            <task-id>131</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>图鉴</task-name>
+            <task-id>132</task-id>
+            <task-unit>h</task-unit>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>背包</task-name>
+            <task-id>133</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>商店</task-name>
+            <task-id>134</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>水族箱</task-name>
+            <task-id>135</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>签到系统 </task-name>
+            <task-id>136</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>邮箱系统</task-name>
+            <task-id>137</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+          <task>
+            <task-name>钓鱼系统</task-name>
+            <task-id>138</task-id>
+            <task-currency-unit>$</task-currency-unit>
+            <task-accrual>accrual-prorated</task-accrual>
+            <task-start-date>21-12-2015, 08:00:00</task-start-date>
+            <task-end-date>21-12-2015, 17:00:00</task-end-date>
+            <task-completion-date>21-12-2015, 08:00:00</task-completion-date>
+            <task-duration>28800000</task-duration>
+            <task-look>
+              <use-bar-color>false</use-bar-color>
+            </task-look>
+          </task>
+        </task-list>
+      </task>
+    </task-list>
+  </task>
+  <task-dependency-list/>
+  <conflict-list/>
+  <assignment-list>
+    <assignment>
+      <assignment-task-id>68</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>69</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>70</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>71</assignment-task-id>
+      <assignment-resource-id>2</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>90</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>90</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>91</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>91</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>92</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>92</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>96</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>96</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>97</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>97</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>98</assignment-task-id>
+      <assignment-resource-id>4</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>124</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>125</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+    <assignment>
+      <assignment-task-id>126</assignment-task-id>
+      <assignment-resource-id>1</assignment-resource-id>
+    </assignment>
+  </assignment-list>
+</company>

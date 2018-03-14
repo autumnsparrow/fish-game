@@ -1,0 +1,30 @@
+<Configuration xmlns="">
+	<name>FishMail</name>
+	<ip>m1</ip>
+	<port>14000</port>
+	<sync>
+		<locators/>
+	</sync>
+	<async>
+		<locators>
+			<locator>
+				<service>Websocket</service>
+				<ns>GameMina</ns>
+			</locator>
+			
+		</locators>
+	</async>
+	<remote>
+		<locators>
+			<locator>
+				<service>FishUser</service>
+				<ns>com.toyo.remote.service.user</ns>
+			</locator>
+			
+			<locator>
+				<service>FishFriends</service>
+				<ns>com.toyo.remote.service.friends</ns>
+			</locator>
+		</locators>
+	</remote>
+</Configuration>

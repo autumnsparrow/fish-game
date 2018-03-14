@@ -1,0 +1,57 @@
+<Config-List xmlns="">
+	<Config>
+	
+		<!--  Node Fish User -->
+		<index>
+			<name>FishUser-1</name>
+			<url>/META-INF/ice/debug/FishUser/FishUser-1.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-2</name>
+			<url>/META-INF/ice/debug/FishUser/FishUser-2.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-3</name>
+			<url>/META-INF/ice/debug/FishUser/FishUser-3.xml</url>
+		</index>
+		
+		
+		<!--  Node Fish Zone -->
+		<index>
+			<name>FishZone</name>
+			<url>/META-INF/ice/debug/FishZone.xml</url>
+		</index>
+		
+		<!-- Node Fish System -->
+		<index>
+			<name>FishSystem</name>
+			<url>/META-INF/ice/debug/FishSystem.xml</url>
+		</index>
+		
+		<!-- Node Websocket -->
+		<index>
+			<name>Websocket</name>
+			<url>/META-INF/ice/debug/Websocket.xml</url>
+		</index>
+		
+		<!-- Node Payment -->
+		<index>
+			<name>Payment</name>
+			<url>/META-INF/ice/debug/Payment.xml</url>
+		</index>
+		
+		<!-- Node Mail -->
+		<index>
+			<name>FishMail</name>
+			<url>/META-INF/ice/debug/FishMail.xml</url>
+		</index>
+		<!-- Node Mail -->
+		<index>
+			<name>FishFriends</name>
+			<url>/META-INF/ice/debug/FishFriends.xml</url>
+		</index>
+		
+	</Config>
+</Config-List>

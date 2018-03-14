@@ -1,0 +1,71 @@
+<Configuration xmlns="">
+	<name>Websocket-5</name>
+	<ip>w5</ip>
+	<port>12005</port>
+	<sync>
+		<locators></locators>
+		
+	</sync>
+	<iceConfig>
+		<enableMetrics>true</enableMetrics>
+		<serverConfig>
+			<Ice.Trace.ThreadPool>1</Ice.Trace.ThreadPool>
+			<Ice.Warn.Connections>300</Ice.Warn.Connections>
+			<Ice.ThreadPool.Server.Size>1</Ice.ThreadPool.Server.Size>
+			<Ice.ThreadPool.Server.SizeMax>300</Ice.ThreadPool.Server.SizeMax>
+			<Ice.ThreadPool.Server.SizeWarn>180</Ice.ThreadPool.Server.SizeWarn>
+		</serverConfig>
+
+		<clientConfig />
+	</iceConfig>
+	<async>
+		<locators>
+			<locator>
+				<service>FishUser</service>
+				<ns>ProtocolUser</ns>
+			</locator>
+			<locator>
+				<service>FishUser</service>
+				<ns>ProtocolPayment</ns>
+			</locator>
+			<locator>
+				<service>FishSystem</service>
+				<ns>ProtocolExchangeCode</ns>
+			</locator>
+			<locator>
+				<service>FishSystem</service>
+				<ns>ProtocolSystem</ns>
+			</locator>
+			
+			
+			<locator>
+				<service>FishZone</service>
+				<ns>ProtocolRankSystem</ns>
+			</locator>
+			
+			<locator>
+				<service>FishZone</service>
+				<ns>ProtocolFishUser</ns>
+			</locator>
+			
+				<locator>
+				<service>FishMail</service>
+				<ns>ProtocolMailSystem</ns>
+			</locator>
+			
+			<locator>
+				<service>FishFriends</service>
+				<ns>ProtocolFriendsSystem</ns>
+			</locator>
+			
+		</locators>
+	</async>
+	<remote>
+		<locators>
+			<locator>
+				<service>FishUser</service>
+				<ns>com.toyo.remote.service.user</ns>
+			</locator>
+		</locators>
+	</remote>
+</Configuration>

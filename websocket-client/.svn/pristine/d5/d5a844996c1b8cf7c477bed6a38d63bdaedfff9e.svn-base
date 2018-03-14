@@ -1,0 +1,40 @@
+用于测试发送好友邮件的流程：
+
+
+1. server --uri Bench
+2. sys connect
+3. list --userId 19920627 --start 10000 --end 10050
+将这个用户id分配给不同测试机器 。
+
+4. disconnect --userId 19920627
+5. users
+
+                            b4fe90b89ba58aefca43dc1fca2974cd|     10037|  19930607|     10001
+6. connect --userId 19930607
+
+7. list --userId 19930607 --start 100000 --end 100500
+加载用户列表 
+8. make friends --userId 19930607 --start 100000 --end 100500 --target 200000
+发送请求好友邮件。
+
+
+
+用于测试成为好友流程：（重新启动）
+
+
+1. server --uri Bench
+2. sys connect
+3. list --userId 19920627 --start 10000 --end 10050
+将这个用户id分配给不同测试机器 。
+
+4. disconnect --userId 19920627
+5. users
+
+                            b4fe90b89ba58aefca43dc1fca2974cd|     10037|  19930607|     10001
+6. connect --userId 19930607
+
+7. list --userId 19930607 --start 200000 --end 200500
+
+加载用户列表 
+8. receiver --userId 20021105 --start 200000 --end  200500
+

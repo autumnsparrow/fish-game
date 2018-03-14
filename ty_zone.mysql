@@ -1,0 +1,193 @@
+-- MySQL dump 10.13  Distrib 5.6.13, for osx10.7 (x86_64)
+--
+-- Host: game.toyo.cool    Database: ty_zone
+-- ------------------------------------------------------
+-- Server version	5.6.28-ndb-7.4.10-cluster-gpl
+use ty_zone_back;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `ty_currency_log`
+--
+
+DROP TABLE IF EXISTS `ty_currency_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_currency_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `f_module` int(11) DEFAULT NULL,
+  `f_action` int(11) DEFAULT NULL,
+  `f_param` int(11) DEFAULT NULL,
+  `f_category` int(11) DEFAULT NULL,
+  `f_amount` int(11) DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'order date.',
+  `client_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_user_id_client_id` (`user_id`,`client_id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=2441 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_fish_equipment_log`
+--
+
+DROP TABLE IF EXISTS `ty_fish_equipment_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_fish_equipment_log` (
+  `weight_log_id` bigint(20) DEFAULT '0',
+  `user_level` int(11) DEFAULT NULL,
+  `rod_id` varchar(30) DEFAULT NULL,
+  `rod_props` varchar(100) DEFAULT NULL,
+  `wheel_id` varchar(30) DEFAULT NULL,
+  `wheel_props` varchar(100) DEFAULT NULL,
+  `line_id` varchar(30) DEFAULT NULL,
+  `lure_id` varchar(30) DEFAULT NULL,
+  `drug_id1` varchar(30) DEFAULT NULL,
+  `drug_id2` varchar(30) DEFAULT NULL,
+  `big_fish_addition` varchar(30) DEFAULT NULL,
+  `tesion_triggers` int(11) DEFAULT NULL,
+  `tesion_used` int(11) DEFAULT NULL,
+  `drag_triggers` int(11) DEFAULT NULL,
+  `drag_used` int(11) DEFAULT NULL,
+  `fish_duration` int(11) DEFAULT NULL,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `drug_id3` varchar(30) DEFAULT NULL,
+  `weight_failed_log_id` bigint(20) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_weight_log_id` (`weight_log_id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=156 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_fish_farm_join_log`
+--
+
+DROP TABLE IF EXISTS `ty_fish_farm_join_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_fish_farm_join_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `farm_id` varchar(40) DEFAULT NULL,
+  `log_type` int(11) DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=766 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_fish_weight_failed_log`
+--
+
+DROP TABLE IF EXISTS `ty_fish_weight_failed_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_fish_weight_failed_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `fish_id` varchar(40) DEFAULT NULL,
+  `grade` int(11) DEFAULT NULL,
+  `rare` int(11) DEFAULT NULL,
+  `weight` decimal(15,12) DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=361 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_fish_weight_log`
+--
+
+DROP TABLE IF EXISTS `ty_fish_weight_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_fish_weight_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `fish_id` varchar(40) DEFAULT NULL,
+  `grade` int(11) DEFAULT NULL,
+  `rare` int(11) DEFAULT NULL,
+  `weight` decimal(15,12) DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=413 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_fish_weight_range`
+--
+
+DROP TABLE IF EXISTS `ty_fish_weight_range`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_fish_weight_range` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fish_id` varchar(45) DEFAULT NULL,
+  `weight_max` decimal(15,12) DEFAULT NULL,
+  `weight_min` decimal(15,12) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=341 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_guide_log`
+--
+
+DROP TABLE IF EXISTS `ty_guide_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_guide_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `guide_date` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_user_id` (`user_id`),
+  KEY `idx_guide_date` (`guide_date`)
+) ENGINE=ndbcluster AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `ty_vit_log`
+--
+
+DROP TABLE IF EXISTS `ty_vit_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ty_vit_log` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `vit` int(11) DEFAULT NULL,
+  `on_line` int(11) DEFAULT NULL,
+  `update_time` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `create_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'order date.',
+  `client_id` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=ndbcluster AUTO_INCREMENT=1390 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-04-14 15:17:44

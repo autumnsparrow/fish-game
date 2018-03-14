@@ -1,0 +1,17 @@
+online deployment nodes:
+
+1. websocket   
+	1.1 
+		export CATALINA_OPTS="$CATALINA_OPTS -Xms512m"
+		export CATALINA_OPTS="$CATALINA_OPTS -Xmx8192m"
+		export CATALINA_OPTS="$CATALINA_OPTS -XX:MaxPermSize=256m"
+	1.2 -Dnode.name=pro.websocket.node-1
+	
+2. fish-app
+	1.  modify fish-app/etc/wrapper.conf
+	    -Xmx 2048m
+	    -Xms 512m
+	2. export NODE_NAME=pro.user.node-1
+	
+	
+	

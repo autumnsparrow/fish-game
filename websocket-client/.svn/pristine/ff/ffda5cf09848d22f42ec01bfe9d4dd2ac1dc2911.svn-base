@@ -1,0 +1,252 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.toyo.fish</groupId>
+  <artifactId>websocket-client</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>websocket-client</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>4.2.4.RELEASE</spring.version>
+		<java.version>1.8</java.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    	<dependency>
+			<groupId>com.toyo</groupId>
+			<artifactId>fish-game</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+	<groupId>org.eclipse.jetty.websocket</groupId>
+	<artifactId>websocket-client</artifactId>
+	<version>9.3.6.v20151106</version>
+</dependency>
+
+<dependency>
+	<groupId>org.eclipse.jetty.websocket</groupId>
+	<artifactId>javax-websocket-client-impl</artifactId>
+	<version>9.3.6.v20151106</version>
+</dependency>
+
+  <dependency>
+        <groupId>org.springframework.shell</groupId>
+        <artifactId>spring-shell</artifactId>
+        <version>1.2.0.M1</version>
+    </dependency>
+    	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+  </dependencies>
+  
+  <repositories>
+    <repository>
+        <id>spring-milestones</id>
+        <name>Spring Milestones</name>
+        <url>https://repo.spring.io/libs-milestone</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
+  
+  <build>
+  
+  
+  
+  <plugins>
+  
+  <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>org.apache.camel.spring.Main</mainClass>
+							<classpathPrefix>lib/</classpathPrefix>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<version>2.4</version> <configuration> <descriptors> <descriptor>src/main/assembly/dist.xml</descriptor> 
+				</descriptors> </configuration> <executions> <execution> <id>make-assembly</id> 
+				<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
+				</executions> </plugin> -->
+
+		<!--  release package. -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<repositoryLayout>flat</repositoryLayout>
+					<includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+					<repositoryName>lib</repositoryName>
+					<daemons>
+						
+					<!-- 	<daemon>
+							<id>fish-user</id>
+							<mainClass>com.toyo.fish.game.FishUserApp</mainClass>
+							<commandLineArguments>
+								<commandLineArgument>start</commandLineArgument>
+							</commandLineArguments>
+
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+
+										<include> macosx-universal-64</include>
+										<include>linux-x86-32</include>
+										<include>linux-x86-64</include>
+										<include>windows-x86-32</include>
+									</includes>
+								</generatorConfiguration>
+							</generatorConfigurations>
+
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+						</daemon>
+
+						<daemon>
+							<id>fish-zone</id>
+							<mainClass>com.toyo.fish.game.FishZoneApp</mainClass>
+							<commandLineArguments>
+								<commandLineArgument>start</commandLineArgument>
+							</commandLineArguments>
+
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+
+										<include> macosx-universal-64</include>
+										<include>linux-x86-32</include>
+										<include>linux-x86-64</include>
+										<include>windows-x86-32</include>
+									</includes>
+								</generatorConfiguration>
+							</generatorConfigurations>
+
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+						</daemon>
+
+
+						<daemon>
+							<id>fish-system</id>
+							<mainClass>com.toyo.fish.game.FishSystemApp</mainClass>
+							<commandLineArguments>
+								<commandLineArgument>start</commandLineArgument>
+							</commandLineArguments>
+
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+
+										<include> macosx-universal-64</include>
+										<include>linux-x86-32</include>
+										<include>linux-x86-64</include>
+										<include>windows-x86-32</include>
+									</includes>
+								</generatorConfiguration>
+							</generatorConfigurations>
+
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+						</daemon>
+ -->
+					 <daemon>
+							<id>fish-websocket</id>
+							<mainClass>com.toyo.fish.websocket.client.SpringApp</mainClass>
+							<commandLineArguments>
+								<commandLineArgument>console</commandLineArgument>
+							</commandLineArguments>
+
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+
+										<include> macosx-universal-64</include>
+										<include>linux-x86-32</include>
+										<include>linux-x86-64</include>
+										<include>windows-x86-32</include>
+									</includes>
+								</generatorConfiguration>
+							</generatorConfigurations>
+
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+						</daemon>
+					</daemons>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-jsw-scripts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>generate-daemons</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+  
+  
+  
+  </plugins>
+  
+  
+  
+  </build>
+</project>

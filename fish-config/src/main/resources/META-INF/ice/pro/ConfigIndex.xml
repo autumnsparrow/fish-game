@@ -1,0 +1,109 @@
+<Config-List xmlns="">
+	<Config>
+	
+		<!--  Node Fish User -->
+		<index>
+			<name>FishUser-1</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-1.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-2</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-2.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-3</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-3.xml</url>
+		</index>
+		
+		
+		<index>
+			<name>FishUser-4</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-4.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-5</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-5.xml</url>
+		</index>
+		
+		<index>
+			<name>FishUser-6</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-6.xml</url>
+		</index>
+		
+		
+		<index>
+			<name>FishUser-7</name>
+			<url>/META-INF/ice/pro/FishUser/FishUser-7.xml</url>
+		</index>
+		
+		
+	
+		<!-- Node Fish System -->
+		<index>
+			<name>FishSystem-1</name>
+			<url>/META-INF/ice/pro/FishSystem/FishSystem-1.xml</url>
+		</index>
+		<index>
+			<name>FishSystem-2</name>
+			<url>/META-INF/ice/pro/FishSystem/FishSystem-2.xml</url>
+		</index>
+		
+		<!-- Node Websocket -->
+		<index>
+			<name>Websocket-1</name>
+			<url>/META-INF/ice/pro/Websocket/Websocket-1.xml</url>
+		</index>
+		
+			<index>
+			<name>Websocket-2</name>
+			<url>/META-INF/ice/pro/Websocket/Websocket-2.xml</url>
+		</index>
+		
+		<index>
+			<name>Websocket-3</name>
+			<url>/META-INF/ice/pro/Websocket/Websocket-3.xml</url>
+		</index>
+		
+			<index>
+			<name>Websocket-4</name>
+			<url>/META-INF/ice/pro/Websocket/Websocket-4.xml</url>
+		</index>
+		
+		
+		<index>
+			<name>Websocket-5</name>
+			<url>/META-INF/ice/pro/Websocket/Websocket-5.xml</url>
+		</index>
+		
+		<!-- Node Payment -->
+		<index>
+			<name>Payment</name>
+			<url>/META-INF/ice/pro/Payment.xml</url>
+		</index>
+		
+		
+		
+			<!--  Node Fish Zone -->
+		<index>
+			<name>FishZone</name>
+			<url>/META-INF/ice/pro/FishZone.xml</url>
+		</index>
+		
+		
+		<!-- Node Mail -->
+		<index>
+			<name>FishMail</name>
+			<url>/META-INF/ice/pro/FishMail.xml</url>
+		</index>
+		<!-- Node Mail -->
+		<index>
+			<name>FishFriends</name>
+			<url>/META-INF/ice/pro/FishFriends.xml</url>
+		</index>
+		
+		
+	</Config>
+</Config-List>

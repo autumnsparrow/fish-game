@@ -1,0 +1,34 @@
+	// request
+	public static class Req {
+
+		String phone;
+		String password;
+
+		public static Req fromJson(String json) {
+			return new JSONDeserializer<Req>().use(null, Req.class)
+					.deserialize(json);
+		}
+
+		public String toJson() {
+			return new JSONSerializer().exclude("*.class").deepSerialize(this);
+		}
+
+	}
+	// response
+	public static class Resp {
+		Integer status;
+		String token;
+
+		public static Resp fromJson(String json) {
+			return new JSONDeserializer<Resp>().use(null, Req.class)
+					.deserialize(json);
+		}
+
+		public String toJson() {
+			return new JSONSerializer().exclude("*.class").deepSerialize(this);
+		}
+	}
+	
+	
+	
+	  curl -i -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d'{"code":10000,"status":0,"content":"ANtrVHNt6A3PzsHxtcCcEgOuhvBfFRAqh+WOmpKZrtvOsw2WckbSfMlUfo005W0mMfMdIlzqGMcxJh4z5AQZcI1AEXRnUT1Q","elapsed":0}' http://localhost:8080/protocol/api

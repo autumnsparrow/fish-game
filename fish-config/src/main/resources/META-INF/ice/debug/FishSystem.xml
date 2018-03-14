@@ -1,0 +1,26 @@
+<Configuration xmlns="">
+	<name>FishSystem</name>
+	<ip>s1</ip>
+	<port>12000</port>
+	<sync>
+		<locators/>
+	</sync>
+	<async>
+		<locators>
+			<locator>
+				<service>Websocket</service>
+				<ns>GameMina</ns>
+			</locator>
+			
+		</locators>
+	</async>
+	<remote>
+			<locators>
+		<locator>
+				<service>FishUser</service>
+				<ns>com.toyo.remote.service.user</ns>
+		</locator>
+		
+		</locators>
+	</remote>
+</Configuration>

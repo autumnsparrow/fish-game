@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="fish-database" time="201512220847">
+	<entities>
+		<data-source id="mysql5-151c9839f06-141c3fa96a118e42">
+			<entity id="1" name="ty_exchange_code" fq-name="ty_system.ty_exchange_code">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="2" name="ty_exchange_code_gift" fq-name="ty_system.ty_exchange_code_gift">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="3" name="ty_exchange_code_item" fq-name="ty_system.ty_exchange_code_item">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="4" name="ty_general_exchange_code" fq-name="ty_system.ty_general_exchange_code">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="5" name="ty_inventory_extend_data" fq-name="ty_system.ty_inventory_extend_data">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="6" name="ty_resource_files" fq-name="ty_system.ty_resource_files">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="7" name="ty_resource_update" fq-name="ty_system.ty_resource_update">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="8" name="ty_user_exchange_code" fq-name="ty_system.ty_user_exchange_code">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="9" name="ty_user_general_exchange_code" fq-name="ty_system.ty_user_general_exchange_code">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="10" name="ty_user_level" fq-name="ty_system.ty_user_level">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="11" name="ty_user_level_data" fq-name="ty_system.ty_user_level_data">
+				<path name="ty_system"/>
+			</entity>
+			<entity id="12" name="ty_channel" fq-name="ty_user.ty_channel">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="13" name="ty_login" fq-name="ty_user.ty_login">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="14" name="ty_third_party_account" fq-name="ty_user.ty_third_party_account">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="15" name="ty_user_account" fq-name="ty_user.ty_user_account">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="16" name="ty_valid_code" fq-name="ty_user.ty_valid_code">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="17" name="ty_zone" fq-name="ty_user.ty_zone">
+				<path name="ty_user"/>
+			</entity>
+			<entity id="18" name="ty_backpack" fq-name="ty_user_zone.ty_backpack">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="19" name="ty_consumable_item" fq-name="ty_user_zone.ty_consumable_item">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="20" name="ty_equipment_ablility" fq-name="ty_user_zone.ty_equipment_ablility">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="21" name="ty_equipment_upgrade" fq-name="ty_user_zone.ty_equipment_upgrade">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="22" name="ty_item_kv" fq-name="ty_user_zone.ty_item_kv">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="23" name="ty_repairable_item" fq-name="ty_user_zone.ty_repairable_item">
+				<path name="ty_user_zone"/>
+			</entity>
+			<entity id="24" name="ty_user_base_info" fq-name="ty_user_zone.ty_user_base_info">
+				<path name="ty_user_zone"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations/>
+	<notes/>
+</diagram>

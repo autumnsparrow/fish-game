@@ -1,0 +1,49 @@
+<Configuration xmlns="">
+	<name>FishUser-7</name>
+	<ip>u7</ip>
+	<port>11007</port>
+	<sync>
+		<locators/>
+	</sync>
+	<async>
+		<locators>
+			<locator>
+				<service>Websocket</service>
+				<ns>GameMina</ns>
+			</locator>
+			
+			<locator>
+				<service>Websocket</service>
+				<ns>BrokerMessage</ns>
+			</locator>
+			
+		</locators>
+	</async>
+	<remote>
+		<locators>
+			<locator>
+				<service>Payment</service>
+				<ns>com.toyo.remote.service.payment</ns>
+			</locator>
+			<locator>
+				<service>FishSystem</service>
+				<ns>com.toyo.remote.service.system</ns>
+			</locator>
+			<locator>
+				<service>FishMail</service>
+				<ns>com.toyo.remote.service.mail</ns>
+			</locator>
+			
+			<locator>
+				<service>FishFriends</service>
+				<ns>com.toyo.remote.service.friends</ns>
+			</locator>
+			
+			
+			<locator>
+				<service>FishZone</service>
+				<ns>com.toyo.remote.service.zone</ns>
+			</locator>
+		</locators>
+	</remote>
+</Configuration>

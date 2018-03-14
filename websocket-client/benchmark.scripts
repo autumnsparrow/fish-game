@@ -1,0 +1,14 @@
+server --uri Test
+ws connect --deviceId D19922045
+ws connect --deviceId D19922051
+ws connect --deviceId D19922085
+ws connect --deviceId D19922090
+ws connect --deviceId D19922091
+ws connect --deviceId D19922092
+ws connect --deviceId D19922094
+ws connect --deviceId D19922099
+ws connect --deviceId D19922102
+ws connect --deviceId D19922116
+ws connect --deviceId D19922118
+ws connect --deviceId D19922122
+ws connect --deviceId D19922123

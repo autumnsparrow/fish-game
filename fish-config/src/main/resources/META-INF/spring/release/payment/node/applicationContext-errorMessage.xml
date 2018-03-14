@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
+	
+
+	<!-- initialize the error message -->
+
+	<bean id="errorMessage" class="com.sky.mobile.protocol.impl.ErrorMessage">
+		<property name="codes">
+			<map key-type="java.lang.Integer" value-type="java.util.HashMap">
+				<!-- 360 app secret -->
+				<entry key="0">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<entry key="0" value="c9f5500b7fc256f68bdfe5a31103c2a6"></entry>
+					</map>
+				</entry> 
+				<!-- uc app secret -->
+				<entry key="1">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<entry key="0" value="0355f2386182f267831fb4ec598967d1"></entry>
+					</map>
+				</entry> 
+				
+				<!-- opp -->
+				<entry key="2">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<entry key="0" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCmreYIkPwVovKR8rLHWlFVw7YDfm9uQOJKL89Smt6ypXGVdrAKKl0wNYc3/jecAoPi2ylChfa2iRu5gunJyNmpWZzlCNRIau55fxGW0XEu553IiprOZcaw5OuYGlf60ga8QT6qToP0/dpiL/ZbmNUO9kUhosIjEu22uFgR+5cYyQIDAQAB"></entry>
+					</map>
+				</entry> 
+				
+					
+				<!-- anzhi -->
+				<entry key="3">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						
+						<entry key="0" value="5cfP0DU4QH342kRAlq52zOHR"></entry>
+						
+					</map>
+				</entry> 
+				
+				<!-- Vivo -->
+				
+				
+				<entry key="4">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- channel id -->
+						<entry key="0" value="10037"></entry>
+						<!-- cp id -->
+						<entry key="1" value="20140702025804544919"></entry>
+						<!-- app id -->
+						<entry key="2" value="f728ddbb5ffb50137f79c63c19e4459f"></entry>
+						<!-- notify id -->
+						<entry key="3" value="http://payment.toyo.cool:8080/payment/vivo/notify"></entry>
+						<!-- get vivo order server url -->
+						<entry key="4" value="https://pay.vivo.com.cn//vivoPay/getVivoOrderNum"></entry>
+						<!-- get cp key -->
+						<entry key="5" value="3ddf395038e95fe6ddb4d40baaf973f5"></entry>
+					</map>
+				</entry> 
+				
+				
+				
+				<!-- Flyme -->
+				<entry key="5">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- check session url -->
+						<entry key="0" value="https://api.game.meizu.com/game/security/checksession"></entry>
+						<!-- AppId -->
+						<entry key="1" value="2884873"></entry>
+						<!-- AppKey -->
+						<entry key="2" value="7e94cec3c0ae43e2a3076f630fc46569"></entry>
+						<!-- AppSecret -->
+						<entry key="3" value="5ECvSYTEG91d4hnRcrU3lwg0BM2ooStj"></entry>
+						
+					</map>
+				</entry> 
+				
+				
+				<!-- Kupai -->
+				
+				<!-- Kupai -->
+				<entry key="6">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app secret -->
+						
+						<entry key="0" value="12A954739D62C0980792C98E9C92C6BB"></entry>
+						
+						
+					</map>
+				</entry> 
+				<!-- Wdj -->
+				<entry key="7">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app secret -->
+						<entry key="0" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCd95FnJFhPinpNiE/h4VA6bU1rzRa5+a25BxsnFX8TzquWxqDCoe4xG6QKXMXuKvV57tTRpzRo2jeto40eHKClzEgjx9lTYVb2RFHHFWio/YGTfnqIPTVpi7d7uHY+0FZ0lYL5LlW4E2+CQMxFOPRwfqGzMjs1SDlH7lVrLEVy6QIDAQAB"></entry>
+						<!-- app key -->
+						<entry key="1" value="a22caa9db58a1d5fc9599b65772a3890"></entry>
+						<!-- check uid url -->
+						<entry key="2" value="https://pay.wandoujia.com/api/uid/check"></entry>
+						
+					</map>
+				</entry> 
+				
+				
+				<!-- baidu -->
+				<entry key="8">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app secret-->
+						<entry key="0" value="iuzM15xG0OVgghHkSi4jBxrcsIcYlhGM"></entry>
+						
+						
+					</map>
+				</entry> 
+				
+				<!-- jinli -->
+				<entry key="9">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app secret-->
+						<entry key="0" value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0Vjgppa93OwcISrWTBy5os+uR9RGo/NJH/5nAYb2IjODajUfh9rh1mEjWWp5bZ15G8ptmL/gFZJbQ1pHzR9OVh+8nLZme/XsH+BjV8BRMLG4Hs18bY4tFCTsj924EGsr7l0WvBcsRudKqoZapEJHIWC8aDFdr6QGlIOXFGordVQIDAQAB"></entry>
+						
+						
+					</map>
+				</entry> 
+				
+				<!-- huawei -->
+				<entry key="10">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app id-->
+						<entry key="0" value="10353888"></entry>
+						<!-- bou secret-->
+						<entry key="1" value="MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAI3Zl+Fbajk3YTNS5TkGBJdtMGqaexpWRE7rsVZzb4sVnCieCfhluiQBOjzfdUi24TfBMP5sZOWtpW9RIKOMaUHKNolDrgvb4wmOq7SUDGgItAnv9fOr9A1OjdDsW2HAkdmwO2kdeTBMSwMiCnAgsIuSSd4t+rrYK3yNyYUO2nfPAgMBAAECgYARs+07h8AbAelUkWzgD/s0tsDLHRpt8AQ4YTvRkTiDgB/sBcUyxedUJP8Sp8SoXYKABdFKf1acP26dFN/g6V4dUjABTZZRw2mz7RVxobwPdRwOtM6GV1/qQz2AhmvITDxsJhWiPmqWpFEaafW1exQxg51I+ymdTEekeFDELcOyGQJBAOt4lO02bDSYbsZeqUHry9QIfQAeRaQJveNep34vHwUcKx4XDe+Q+yxi4oKeqswWx1mB0snZKIWJ3Inu1ir27YMCQQCaN4HLMhCXUGJrHDnDkShkQsPXO9WIxJsApcN9X/n9wtrYEoFM/i2VmfsHpSEblTWgY73hD49SQfMl9qZMJubFAkEAoZfDpDK3+TQuuSWXRCz8WUtl9SHRKuygipuXmCngQNJ+6IxrvN8i7+gAiCE5Fwv+zHciX/EONO5SEbp88Uk53wJAVrl2VUWvTNiYsDFsTo14EIH3TjfIyqP9ouyVNhFeLZWBqlclvZ2HFwVDxTXYm4FaafsNUd6FM7YAvc2qEVMjHQJAV53ptPx2OM0FhOv+bhaB43rsqjqRzJ9oRLZ3o05+iE7nnTs3W28PMJR10QhY/g/Mj5nX3P4QBC+0hVLihTXcug=="></entry>
+						<!-- pay rsa private -->
+						<entry key="2" value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDA88mvnD0gjra4E7EtkIR/otiJpzpOLXDhBFmSGg7oHaj5z8R1viE5tHjfT6HZPOMp/HECi6CsoDAbMU3GS9gtHLKS6mJZ4n/zH+r1pGmc26oR6r6Wt67vpejouBWk8ff/qVsqC8a7LJAOOAAcxKOKQGNSxSgAGjz+O+Jqr/UgGf/0RwzdOWRoceVdNpEPiorIHs36jWLrhC2EW59P/Zyreb+jn1Q5uvwScPH8KTQ6R7mP2jBF+x6tyRQogv3BaxB82cA/hXc0K6QJ4ihjtUrwzBG3MK3Nchlyyvkwlbg/NwNNMFCPe+cGdSkT5/GxS2hLw3PHFRKDmY7W69OZoTXAgMBAAECggEAdks3Ox9GUWs13FM4NKcCCPxI/G7Du80EpObVzx+Y6qJ5lQ7O+TlXYvbI1p/AcEzSV74AL5Slhe5Vn2PbdYK3dIfBIeknnAvMb/hScaAklb1roHRoyJiah3Qjc8V3I81c7wj+u5yBhmmR7tcROfSTitxg7p5eknftMiEM3ItQ9csm+H/DeA9tGiduS7nQrr29RoPdzlK9kJZNXkcBEZscLbBYqtdYE6GjZWUWZWibcrohFpE2HXLMPd6/wcwTZsFnpewc3mS4VsAWYaJnw5s5VZJWcKJJJ0LrzU33RHm8kuQUShXXcvNRonjbzmGzXNRmuHlRxVP8D0myjGdjJn9NIQKBgQDpOrC7VWuTSK3gLbJI99eYEfvdsSEibhWXhX8K40o4uC9H0N+UxkBSRU62BuCEVEUMxhZu9vDVbkl95NcFeY7nQNKxr0ptbuOnqdq97Nz5aMLWK+fAy7bhJd96RTdPKcGaFOzV2V8U+Fy49QXLJxEVi2h/jIJKypSH8UPFjSgF7wKBgQDWDf4HnZVFtGaJ8kMmpGOBXdILb7pn7fTOAipoFFZFrR9kAPQkHVIu7mZ0bIsNrLV1e/YMBbndDJbg+rOq6eA8Gk7jVVLQgAFrmpqSvuA3sDnBKJDSTvLPMJvaGYdJ1WPvfYdDM70lOXTQu411/zRPOmqsgl5ExdLnQLEnHLWXmQKBgGor54xAJIqVyWGGK+T/vkth1HBlVBoiVv31LZI9SepsHknpEf7eCSXqmxxOISLcYdqgylGVZKkkXZxL8n5xidZIMiHlFFKg6k3HCubuzuFTCW8J6aRgmE4COaulmroU3idQY0gufhRDw6IHGK4UiLhwEBAQXLfDZL5F3H4v9gpNAoGAPI0qvibCsjwtAXrJqiW4jEDpCRkrBvlWVexg6J5QJVeq2JQ4e/rbY7FGxEpsL4sarchKOu5nvHMyPyRMLN4J85aRmFdrnNWJEVJjxX0/WiF8xPpftU5l+1xJyjGMhsNZiMbeu5DoQZ52QBG+G5H8zyi8Ql6Coju/xHEVa/YAHIkCgYEA0cWh6QEPu8JELjlXxJYVwA+32Hhzo0/jm2GtF3eF995JkEnZTrC2+X4LNT5jzbNcIMMrROBwZmoxq1bPn8/A97iBdzCZdm10F+IG3kouQj4ALkH206f5ucIn7sDhdjU4Z8tGDYG0ev41YcK3ZnuXKz45jV8hidzE7s5YOwTOgDk="></entry>
+						<!--  pay rsa public -->
+						<entry key="3" value="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwwPPJr5w9II62uBOxLZCEf6LYiac6Ti1w4QRZkhoO6B2o+c/Edb4hObR430+h2TzjKfxxAougrKAwGzFNxkvYLRyykupiWeJ/8x/q9aRpnNuqEeq+lreu76Xo6LgVpPH3/6lbKgvGuyyQDjgAHMSjikBjUsUoABo8/jviaq/1IBn/9EcM3TlkaHHlXTaRD4qKyB7N+o1i64QthFufT/2cq3m/o59UObr8EnDx/Ck0Oke5j9owRfserckUKIL9wWsQfNnAP4V3NCukCeIoY7VK8MwRtzCtzXIZcsr5MJW4PzcDTTBQj3vnBnUpE+fxsUtoS8NzxxUSg5mO1uvTmaE1wIDAQAB"></entry>
+						
+					</map>
+				</entry> 
+				<!-- Mi  errorMessage -->
+				
+				<entry key="11">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app id-->
+						<entry key="0" value="1CEii0Fmea+9nHdwelE6eQ=="></entry>
+								
+					</map>
+				</entry> 
+				
+				<!-- Qq -->
+					
+				<entry key="12">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app id-->
+						<entry key="0" value="UlIu6TKTMianZDBK5OeQ2HfIxt6NaJrr"></entry>
+								
+					</map>
+				</entry> 
+				
+				<!-- Youku -->
+				<!-- 
+				AppID：2061
+AppKey：759f6b252132b388
+AppSecret：e6a1298ce78a89f769dff9f39db76257
+PayKey：b0d60b61043afa338df3307a73ead07a
+				
+				 -->
+				<entry key="13">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- app id-->
+						<entry key="0" value="b0d60b61043afa338df3307a73ead07a"></entry>
+						<entry key="1" value="http://www.toyo.cool:8080/payment/youku/notify"></entry>
+								
+					</map>
+				</entry> 
+				
+					
+				<!-- Meizu SDK single -->
+				<entry key="14">
+					<map key-type="java.lang.Integer" value-type="java.lang.String">
+						<!-- check session url -->
+						<entry key="0" value="https://api.game.meizu.com/game/security/checksession"></entry>
+						<!-- AppId -->
+						<entry key="1" value="2725090"></entry>
+						<!-- AppKey -->
+						<entry key="2" value="b15b3936512f4e8dbfca820b083950f1"></entry>
+						<!-- AppSecret -->
+						<entry key="3" value="PV18Y6bt7yza3zCpAgFI8QlcSysmYFNL"></entry>
+						
+					</map>
+				</entry> 
+				
+				
+				
+				
+			</map>
+			
+				
+			
+
+		</property>
+	</bean>
+
+
+	
+</beans>

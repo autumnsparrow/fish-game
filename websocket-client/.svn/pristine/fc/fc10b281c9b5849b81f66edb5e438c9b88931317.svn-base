@@ -1,0 +1,19 @@
+mail getAllMail --deviceId D19922045 --category AlreadyFriend --state Read 
+mail getAllMail --deviceId D19922045 --category AlreadyFriend --state UnRead 
+mail getAllMail --deviceId D19922045 --category AlreadyFriend --state UnRead 
+mail getAllMail --deviceId D19922045 --category AlreadyFriend --state UnRead 
+mail getAllMail --deviceId D19922045 --category FriendRequest   --state UnRead 
+mail getAllMail --deviceId D19922045 --category Vit  --state UnRead 
+mail getAllMail --deviceId D19922045 --category SystemNormal  --state UnRead 
+mail getAllMail --deviceId D19922045 --category SystemNormal  --state UnRead 
+mail getAllMail --deviceId D19922045 --category SystemAttachment   --state UnRead 
+mail getAllMail --deviceId D19922045 --category SystemAttachment   --state UnRead 
+
+mail getAllMail --deviceId D19922051 --category AlreadyFriend --state Read 
+mail getAllMail --deviceId D19922051 --category AlreadyFriend --state UnRead 
+mail getAllMail --deviceId D19922051 --category FriendRequest   --state UnRead 
+mail getAllMail --deviceId D19922051 --category FriendRequest   --state Read 
+mail getAllMail --deviceId D19922051 --category Vit  --state UnRead
+mail getAllMail --deviceId D19922051 --category Vit  --state Read 
+mail getAllMail --deviceId D19922051 --category SystemNormal  --state UnRead 
+mail getAllMail --deviceId D19922051 --category SystemAttachment   --state UnRead 

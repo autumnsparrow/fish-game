@@ -1,0 +1,43 @@
+<Configuration xmlns="">
+	<name>FishZone</name>
+	<ip>z1</ip>
+	<port>15000</port>
+	<sync>
+		<locators/>
+	</sync>
+	<iceConfig>
+		<enableMetrics>true</enableMetrics>
+		<serverConfig>
+			<Ice.Trace.ThreadPool>1</Ice.Trace.ThreadPool>
+			<Ice.Warn.Connections>300</Ice.Warn.Connections>
+			<Ice.ThreadPool.Server.Size>1</Ice.ThreadPool.Server.Size>
+			<Ice.ThreadPool.Server.SizeMax>300</Ice.ThreadPool.Server.SizeMax>
+			<Ice.ThreadPool.Server.SizeWarn>180</Ice.ThreadPool.Server.SizeWarn>
+		</serverConfig>
+
+		<clientConfig />
+	</iceConfig>
+	<async>
+		<locators>
+			<locator>
+				<service>Websocket</service>
+				<ns>GameMina</ns>
+			</locator>
+			
+		</locators>
+	</async>
+	<remote>
+		<locators>
+			<locator>
+				<service>FishUser</service>
+				<ns>com.toyo.remote.service.user</ns>
+			</locator>
+			
+			<locator>
+				<service>FishFriends</service>
+				<ns>com.toyo.remote.service.friends</ns>
+			</locator>
+			
+		</locators>
+	</remote>
+</Configuration>

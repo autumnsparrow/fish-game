@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-151c9839f06-141c3fa96a118e42" provider="mysql" driver="mysql5" name="MySQL - ty_user(local)" create-date="1450784985162" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="127.0.0.1" port="3306" server="" database="ty_user" url="jdbc:mysql://127.0.0.1:3306/ty_user" user="root" password="QlZVdBQVJPc=" type="dev">
+			<property name="connectTimeout" value="20000"/>
+			<property name="@dbeaver-ssl@" value="false"/>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" user="" save-password="false">
+				<property name="socks-host" value=""/>
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" user="" save-password="false">
+				<property name="port" value="22"/>
+				<property name="host" value=""/>
+				<property name="keyPath" value=""/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<bootstrap defaultObject="ty_user"/>
+		</connection>
+	</data-source>
+	<data-source id="mysql5-151c9c53bdb-7a522172fc237098" provider="mysql" driver="mysql5" name="MySQL - sms_payment(online)" create-date="1450789177697" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="3306" server="" database="sms_payment" url="jdbc:mysql://localhost:3306/sms_payment" user="root" password="QhUHOhNUVw5l8w==" type="dev">
+			<property name="connectTimeout" value="20000"/>
+			<property name="@dbeaver-ssl@" value="false"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="true" user="spp" save-password="true" password="RBEMLUpMFAZeXUEDd/c=">
+				<property name="port" value="3022"/>
+				<property name="host" value="www.dongfengweiye.com"/>
+				<property name="keyPath" value=""/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" user="" save-password="false">
+				<property name="socks-host" value=""/>
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<bootstrap/>
+		</connection>
+	</data-source>
+</data-sources>

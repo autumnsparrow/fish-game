@@ -1,0 +1,19 @@
+<Configuration xmlns="">
+	<name>Payment</name>
+	<ip>p</ip>
+	<port>16000</port>
+	<sync>
+		<locators/>
+	</sync>
+	<async>
+		<locators/>
+	</async>
+	<remote>
+		<locators>
+			<locator>
+				<service>FishUser</service>
+				<ns>com.toyo.remote.service.user</ns>
+			</locator>
+		</locators>
+	</remote>
+</Configuration>

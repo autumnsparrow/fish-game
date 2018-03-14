@@ -1,0 +1,839 @@
+package com.toyo.fish.websocket.client.cmd;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.shell.core.CommandMarker;
+import org.springframework.shell.core.annotation.CliAvailabilityIndicator;
+import org.springframework.shell.core.annotation.CliCommand;
+import org.springframework.shell.core.annotation.CliOption;
+import org.springframework.stereotype.Component;
+
+import com.sky.game.context.GameContextGlobals;
+import com.sky.game.context.executor.UnorderedThreadPoolExecutor;
+import com.sky.game.context.util.CronUtil;
+import com.sky.game.context.util.G;
+import com.sky.game.context.util.GameUtil;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0001Request;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0002Request;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0003Request;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0004Request;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0005Request;
+import com.toyo.fish.protocol.beans.PFS0000Beans.PFS0006Request;
+import com.toyo.fish.protocol.beans.PFU0000Beans.CurrencyRecord;
+import com.toyo.fish.protocol.beans.PFU0000Beans.PFU0001Request;
+import com.toyo.fish.protocol.beans.PFU0000Beans.PFU0003Request;
+import com.toyo.fish.protocol.beans.PFU0000Beans.PFU0004Request;
+import com.toyo.fish.protocol.beans.PFU0000Beans.PFU0005Request;
+import com.toyo.fish.protocol.beans.PFU0000Beans.VitRecord;
+import com.toyo.fish.protocol.beans.PMS0000Beans.PMS0003Request;
+import com.toyo.fish.protocol.beans.PMS0000Beans.PMS0004Request;
+import com.toyo.fish.protocol.beans.PMS0000Beans.PMS0005Request;
+import com.toyo.fish.protocol.beans.PMS0000Beans.PMS0006Request;
+import com.toyo.fish.protocol.beans.PP0000Beans.PP0001Requet;
+import com.toyo.fish.protocol.beans.PP0000Beans.PP0006Request;
+import com.toyo.fish.protocol.beans.PRS0000Beans.PRS0001Request;
+import com.toyo.fish.protocol.service.domain.MailAttachment;
+import com.toyo.fish.protocol.service.domain.MailAttachments;
+import com.toyo.fish.protocol.service.domain.MailLevel;
+import com.toyo.fish.protocol.service.domain.MailTriggerExpresion;
+import com.toyo.fish.websocket.client.FishWebsocketWrapper;
+import com.toyo.fish.websocket.client.WebsocketClientHandler.IWebsocketMessageHandle;
+
+@Component
+public class WebsocketCommand implements CommandMarker {
+
+	private static final Log logger = LogFactory.getLog(WebsocketCommand.class);
+
+	@Autowired
+	UnorderedThreadPoolExecutor executor;
+
+	@CliAvailabilityIndicator({ "ws connect" })
+	public boolean isCommandAvailable() {
+		return true;
+	}
+
+	String destUri = "ws://www.toyo.cool:8080/game-websocket/api";
+	// String destUri = "ws://localhost:8080/game-websockets/api";
+
+	private static enum ServerTypes {
+		Local(0), Test(1), Product(2);
+		private int type;
+
+		private ServerTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	private <R> String baseCommand(DeviceId deviceId, String desc, final String transcode, final String retranscode,
+			final R o) {
+
+		final DeviceId id = deviceId;
+
+		executor.execute(new Runnable() {
+
+			public void run() {
+				// TODO Auto-generated method stub
+				try {
+					id.getWrapper().send(transcode, retranscode, o, new IWebsocketMessageHandle() {
+
+						public void handle(String content) {
+							// TODO Auto-generated method stub
+							logger.info(content);
+						}
+					});
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+
+		return desc + id.toString();
+	}
+
+	private List<Long> getIdSeqs(String idSeq) {
+		String[] seqs = idSeq.split(",");
+		List<Long> mailIdSeq = GameUtil.getList();
+		for (String s : seqs) {
+			mailIdSeq.add(Long.parseLong(s));
+		}
+
+		return mailIdSeq;
+	}
+
+	public static enum DeviceId {
+		SYS("sys", "5da2961e618e75d64d06df0b251cad78f0beeae7", 360, 0), 
+		Dev1("Dev1", "39054942f270f15a380ee944581f8b96",10037, 0), 
+		Dev2("1479", "98f27e93be26bd57352ab8d34acf4b23", 10037, 0), 
+		Dev3("Dev3", "123457", 10038, 0),
+		D19922092("1486", "123457", 10018, 0),
+		D19922091("1485", "123457", 10032, 0),
+		D19922102("1496","fd860713ac85bfbb6eca52e4d6b809021409a623",10038,0);
+
+		private String id;
+		private String deviceId;
+		private int channel;
+		private int state;
+		private FishWebsocketWrapper wrapper;
+
+		public FishWebsocketWrapper getWrapper() {
+			return wrapper;
+		}
+
+		public void setWrapper(FishWebsocketWrapper wrapper) {
+			this.wrapper = wrapper;
+		}
+
+		private DeviceId(String id, String deviceId, int channel, int state) {
+			this.id = id;
+			this.deviceId = deviceId;
+			this.channel = channel;
+			this.state = state;
+		}
+
+		public String toString() {
+			return id + " |" + deviceId + " " + channel + " " + state;
+		}
+
+	}
+
+	private static final ConcurrentHashMap<String, DeviceId> idMaps = new ConcurrentHashMap<String, WebsocketCommand.DeviceId>();
+
+	@CliCommand(value = "server", help = " switch servers ")
+	public String server(@CliOption(key = { "uri" }, mandatory = true, help = " server uri") ServerTypes types) {
+
+		switch (types.type) {
+		case 0:
+			destUri = "ws://localhost:8080/game-websockets/api";
+			break;
+		case 1:
+			destUri = "ws://www.toyo.cool:8080/game-websocket/api";
+			break;
+		case 2:
+			destUri = "ws://websocket.toyo.cool:8080/game-websocket/api";
+			break;
+
+		default:
+			break;
+		}
+
+		return " Switch :" + destUri;
+	}
+
+	@CliCommand(value = "ws connect", help = " connection ws ")
+	public String connect(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+		final FishWebsocketWrapper wrapper = new FishWebsocketWrapper(destUri, deviceId.deviceId, deviceId.channel, 20);
+		final DeviceId id = deviceId;
+		executor.execute(new Runnable() {
+
+			public void run() {
+				// TODO Auto-generated method stub
+
+				wrapper.connect();
+
+			}
+		});
+
+		id.state = 1;
+		id.setWrapper(wrapper);
+		idMaps.put(id.deviceId, id);
+
+		return "Connecting " + deviceId.toString();
+	}
+
+	@CliCommand(value = "ws show", help = " show connections  ")
+	public String showConnections() {
+		StringBuffer buf = new StringBuffer();
+		buf.append("ws connection:\n");
+		for (DeviceId id : idMaps.values()) {
+			buf.append(id.toString()).append("\n");
+		}
+
+		return buf.toString();
+	}
+
+	@CliCommand(value = "ws disconnect", help = " connection ws ")
+	public String disconnect(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+		final DeviceId id = deviceId;
+		executor.execute(new Runnable() {
+
+			public void run() {
+				// TODO Auto-generated method stub
+				idMaps.get(id.deviceId).getWrapper().disconnect();
+				id.state = 0;
+				// idMaps.remove(id.deviceId);
+
+			}
+		});
+
+		return "disconnect " + id.toString();
+	}
+
+	//
+	// Mail
+	//
+	//
+	//
+	@CliCommand(value = "mail addPush", help = "(PMS0002) add push mail ")
+	public String addPushMail(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final DeviceId id = deviceId;
+		executor.execute(new Runnable() {
+
+			public void run() {
+				// TODO Auto-generated method stub
+				id.getWrapper().add("PMS0002", new IWebsocketMessageHandle() {
+
+					public void handle(String content) {
+						// TODO Auto-generated method stub
+						logger.info(">>>>>>>New Mail Arrival:" + content);
+					}
+				});
+
+			}
+		});
+
+		return "Add PushMail:" + id.toString();
+
+	}
+
+	public static enum MailCategory {
+		Normal(0), Vit(1), FriendRequest(2), AlreadyFriend(3), ClientMail(4), AttachmentMail(5);
+
+		private int state;
+
+		private MailCategory(int state) {
+			this.state = state;
+		}
+
+	}
+
+	public static enum MailStates {
+		Decline(-1),UnRead(0), Read(1), Deleted(2);
+
+		private int state;
+
+		private MailStates(int state) {
+			this.state = state;
+		}
+
+	}
+
+	@CliCommand(value = "mail update", help = " PMS0003(update mail state) ")
+	public String updateMailState(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "mailId" }, mandatory = true, help = "mailId ") Long mailId,
+			@CliOption(key = { "state" }, mandatory = true, help = "mail state (0:unread,1:read) ") MailStates state) {
+
+		final PMS0003Request o = G.o(PMS0003Request.class);
+		o.setMailId(mailId);
+		o.setState(state.state);
+		return baseCommand(deviceId, "Update mail:", "PMS0003", "SMP0003", o);
+
+	}
+
+	@CliCommand(value = "mail getAllMail", help = " PMS0004(Get All Mail Seq) ")
+	public String getMailSeq(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = {
+					"category" }, mandatory = true, help = "mail category:\n\t0:normal\n\t1:vit\n\t2,friend request\n\t3:aready friends\n\t4:client mail,5:attachment mail ") MailCategory category,
+			@CliOption(key = { "state" }, mandatory = true, help = "mail state (0:unread,1:read) ") MailStates state
+
+	) {
+
+		final PMS0004Request o = G.o(PMS0004Request.class);
+		o.setCategory(category.state);
+		o.setState(state.state);
+		o.setOffset(0);
+		o.setLength(100);
+		return baseCommand(deviceId, "Get mail seq:", "PMS0004", "SMP0004", o);
+
+	}
+
+	@CliCommand(value = "mail getmail", help = " PMS0005(get Mail Seq) ")
+	public String getMail(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "idseq" }, mandatory = true, help = "device id seq sperate with ,") String idSeq) {
+
+		final PMS0005Request o = G.o(PMS0005Request.class);
+
+		List<Long> mailIdSeq = getIdSeqs(idSeq);
+		o.setIds(mailIdSeq);
+
+		return baseCommand(deviceId, "Get MailSeq", "PMS0005", "SMP0005", o);
+
+	}
+
+	// create the scheduled mail and system mail.
+
+	public static enum MailAttachmentTypes {
+
+		Item(1), Command(2), Kv(3);
+
+		private int type;
+
+		private MailAttachmentTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	private static class MailAttachmentObjectSeq extends ObjectSeq<String, MailAttachment> {
+
+	}
+
+	MailAttachmentObjectSeq mailAttachmentObjectSeq = new MailAttachmentObjectSeq();
+
+	@CliCommand(value = "attachment create", help = " create attachment ")
+	public String createMailAttachment(
+
+			@CliOption(key = { "id" }, mandatory = true, help = " id") String id,
+			@CliOption(key = { "type" }, mandatory = true, help = " type") MailAttachmentTypes type,
+			@CliOption(key = { "value" }, mandatory = true, help = " value") String value) {
+
+		MailAttachment o = G.o(MailAttachment.class);
+		o.setId(id);
+		o.setType(type.type);
+		o.setValue(value);
+
+		return mailAttachmentObjectSeq.create(id, o);
+
+	}
+
+	@CliCommand(value = "attachment show", help = " show attachment ")
+	public String showMailAttachments() {
+
+		return mailAttachmentObjectSeq.show();
+	}
+
+	@CliCommand(value = "attachment delete", help = " delete attachment ")
+	public String deleteMailAttachments(@CliOption(key = { "id" }, mandatory = true, help = " id") String id) {
+		return mailAttachmentObjectSeq.delete(id);
+	}
+
+	@CliCommand(value = "attachment clear", help = " delete attachment ")
+	public String clearMailAttachments() {
+
+		return mailAttachmentObjectSeq.clear();
+	}
+
+	MailTriggerExpresion trigger;// =new MailTriggerExpresion();
+
+	private static enum MailTriggerUserLevelTypes {
+
+		LE(1), BW(2), GE(3);
+		private int type;
+
+		private MailTriggerUserLevelTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	@CliCommand(value = "mail trigger", help = " delete attachment ")
+	public String createTrigger(@CliOption(key = { "minLevel" }, mandatory = false, help = " minLevel") int minLevel,
+			@CliOption(key = { "maxLevel" }, mandatory = false, help = " maxLevel") int maxLevel,
+			@CliOption(key = {
+					"userLevelTypes" }, mandatory = false, help = " userLevelTypes") MailTriggerUserLevelTypes userLevelTypes,
+			@CliOption(key = { "apkVersion" }, mandatory = false, help = " apkVersion") boolean apkVersion,
+			@CliOption(key = { "loginAfterNDays" }, mandatory = false, help = " loginAfterNDays") int loginAfterNDays,
+			@CliOption(key = { "userIdSeq" }, mandatory = false, help = " userIdSeq") String userIdSeq) {
+		trigger = G.o(MailTriggerExpresion.class);
+		MailLevel mailLevel = G.o(MailLevel.class);
+		mailLevel.setMax(maxLevel);
+		mailLevel.setMin(minLevel);
+		mailLevel.setRelation(userLevelTypes.type);
+		trigger.setUserLevel(mailLevel);
+		trigger.setApkVersion(apkVersion);
+		trigger.setLoginAfterNDays(loginAfterNDays);
+
+		if (userIdSeq != null) {
+			List<Long> userIds = getIdSeqs(userIdSeq);
+			trigger.setUserIds(userIds);
+		}
+
+		return GameContextGlobals.getJsonConvertor().format(trigger);
+	}
+
+	@CliCommand(value = "mail create", help = " PMS0006( If need the trigger and attachments ,please create it first.) ")
+	public String crateMail(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "title" }, mandatory = true, help = " device id") String title,
+			@CliOption(key = { "content" }, mandatory = true, help = " device id") String content,
+			@CliOption(key = { "category" }, mandatory = true, help = " device id") MailCategory category,
+			@CliOption(key = { "activeTime" }, mandatory = true, help = " device id") String activeDateTime,
+			@CliOption(key = { "activeMinutes" }, mandatory = true, help = " device id") int activeMinutes
+
+	) {
+
+		final PMS0006Request o = G.o(PMS0006Request.class);
+		o.setActiveDateTime(activeDateTime);
+		o.setActiveHours(activeMinutes);
+		MailAttachments attachments = G.o(MailAttachments.class);
+		List<MailAttachment> mas = GameUtil.getList();
+		mas.addAll(mailAttachmentObjectSeq.getAll());
+		attachments.setAttachments(mas);
+		o.setAttachments(attachments);
+		o.setTrigger(trigger);
+
+		o.setTitle(title);
+		o.setContent(content);
+
+		return baseCommand(deviceId, "Create Mail", "PMS0006", "SMP0006", o);
+
+	}
+
+	//
+	// PFS
+	//
+	//
+	//
+
+	@CliCommand(value = "friends searchFriends", help = " PFS0001(Search UserId) ")
+	public String searchUserId(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "searchUserId" }, mandatory = true, help = "user id") Long userId) {
+
+		final PFS0001Request o = G.o(PFS0001Request.class);
+
+		o.setSearchUserId(userId);
+
+		return baseCommand(deviceId, "Search UserId", "PFS0001", "SFP0001", o);
+
+	}
+
+	public static enum FriendMailTypes {
+		FriendRequestMail(1), FriendVitMail(2);
+
+		private int types;
+
+		private FriendMailTypes(int types) {
+			this.types = types;
+		}
+
+	}
+
+	@CliCommand(value = "friends sendFriendMail", help = " PFS0002(Send Friend Mail) ")
+	public String sendFriendsMail(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "userId" }, mandatory = true, help = "user id") Long userId,
+			@CliOption(key = { "mailTypes" }, mandatory = true, help = "user id") FriendMailTypes actionType) {
+
+		final PFS0002Request o = G.o(PFS0002Request.class);
+
+		o.setActionType(actionType.types);
+		o.setUserId(userId);
+
+		return baseCommand(deviceId, "Send Friend Mail", "PFS0002", "SFP0002", o);
+
+	}
+
+	@CliCommand(value = "friends getFriends", help = " PFS0003(Get Friend Seq) ")
+	public String getFriends(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final PFS0003Request o = G.o(PFS0003Request.class);
+
+		o.setOffset(0);
+		o.setLength(100);
+
+		return baseCommand(deviceId, "Get Friends", "PFS0003", "SFP0003", o);
+
+	}
+
+	@CliCommand(value = "friends getRecomment", help = " PFS0004(Get Recomment Friend Seq) ")
+	public String getRecommentFriends(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final PFS0004Request o = G.o(PFS0004Request.class);
+
+		return baseCommand(deviceId, "Get Recomment Friend Seq", "PFS0004", "SFP0004", o);
+
+	}
+
+	@CliCommand(value = "friends removeFriends", help = " PFS0005(Remove  Friend IdSeq) ")
+	public String removeFriends(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "friendIds" }, mandatory = true, help = "friend IdsSeq") String friendsIds) {
+
+		final PFS0005Request o = G.o(PFS0005Request.class);
+		List<Long> idSeq = getIdSeqs(friendsIds);
+		o.setFriendIds(idSeq);
+
+		return baseCommand(deviceId, "Remove Friend IdSeq", "PFS0005", "SFP0005", o);
+
+	}
+
+	@CliCommand(value = "friends getRestriction", help = " PFS0006(Get  Friend Restriction) ")
+	public String getRestriction(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final PFS0006Request o = G.o(PFS0006Request.class);
+
+		return baseCommand(deviceId, "Get  Friend Restriction", "PFS0006", "SFP0006", o);
+
+	}
+
+	//
+	//
+	// FriendZone. PFU
+	//
+	//
+	public static enum UserFarmActionTypes {
+
+		JoinFarm(1), LeaveFarm(2);
+
+		private int state;
+
+		private UserFarmActionTypes(int state) {
+			this.state = state;
+		}
+
+	}
+
+	@CliCommand(value = "fish farm", help = " PFU0001(Join or Leave farm) ")
+	public String joinOrLeaveFarm(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "farmId" }, mandatory = true, help = " device id") String farmId, @CliOption(key = {
+					"actionTypes" }, mandatory = true, help = "farm action 1:join,2:leave") UserFarmActionTypes actionTypes) {
+
+		final PFU0001Request o = G.o(PFU0001Request.class);
+		o.setFarmId(farmId);
+		o.setUserAction(actionTypes.state);
+
+		return baseCommand(deviceId, "Join or Leave farm", "PFU0001", "UFP0001", o);
+
+	}
+
+	/**
+	 * 
+	 * 
+	 * 
+	 * @author sparrow
+	 *
+	 */
+	public static enum ModuleTypes {
+
+		Backpack(1), Achievement(2), Task(3), GoldFinger(4), Fish(5), Aqua(6), Cdk(7), Chest(8), LevelUp(9), Pack(
+				10), Signature(11), Payment(12);
+		private int type;
+
+		private ModuleTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	public static enum ActionTypes {
+		LevelUp(1),
+
+		Buy(2), Sell(3), Fished(4), Refresh(5), ClickGold(6), Get(7), Reward(8), Repair(9);
+
+		private int type;
+
+		private ActionTypes(int type) {
+
+			this.type = type;
+		}
+
+	}
+
+	public static enum ParamTypes {
+		Drug(1), Rod(2), Line(3), Lure(4), Wheel(5), MainTask(6), TimedTask(7), EveryDayTask(8), Fish(9), Garbage(
+				10), ExchageCode(11), OneTime(12), TenTimes(13), TuhaoPack(14), FailurePack(15);
+
+		private int type;
+
+		private ParamTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	public static enum CategoryTypes {
+		Gold(1), Vit(2), Diamond(3);
+
+		private int type;
+
+		private CategoryTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	private AtomicLong seq = new AtomicLong(0);
+
+	private Long getSeqId() {
+		long id = System.currentTimeMillis() + seq.getAndIncrement();
+		return Long.valueOf(id);
+	}
+
+	private static class CurrencyObjectSeq extends ObjectSeq<Long, CurrencyRecord> {
+
+	}
+
+	// private Map<Long,CurrencyRecord> currentRecords=GameUtil.getMap();
+	CurrencyObjectSeq currencyObjectSeq = new CurrencyObjectSeq();
+
+	@CliCommand(value = "currency delete", help = " delete currency record ")
+	public String deleteCurrency(@CliOption(key = { "id" }, mandatory = true, help = "client id") Long id) {
+
+		return currencyObjectSeq.delete(id);
+	}
+
+	@CliCommand(value = "currency clear", help = " clear currency record ")
+	public String clearCurrency() {
+		return currencyObjectSeq.clear();
+	}
+
+	@CliCommand(value = "currency show", help = " show currency record ")
+	public String showCurrency() {
+		return currencyObjectSeq.show();
+	}
+
+	@CliCommand(value = "currency create", help = " create currency record ")
+	public String createCurrencyRecord(
+			@CliOption(key = { "module" }, mandatory = true, help = " module") ModuleTypes module,
+			@CliOption(key = { "action" }, mandatory = true, help = " action") ActionTypes action,
+			@CliOption(key = { "param" }, mandatory = true, help = " param") ParamTypes param,
+			@CliOption(key = { "amount" }, mandatory = true, help = " amount") int amount,
+			@CliOption(key = { "category" }, mandatory = true, help = " category") CategoryTypes category) {
+
+		CurrencyRecord o = G.o(CurrencyRecord.class);
+		o.setClientId(getSeqId());
+		o.setOrderTime(CronUtil.getFormatedDate(new Date()));
+		o.setAction(action.type);
+		o.setAmount(amount);
+		o.setCategory(category.type);
+		o.setModule(module.type);
+		o.setParam(param.type);
+
+		return currencyObjectSeq.create(o.getClientId(), o);
+
+	}
+
+	@CliCommand(value = "fish currency", help = " PFU0003(add currency list) ")
+	public String fishCurrency(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final PFU0003Request o = G.o(PFU0003Request.class);
+
+		List<CurrencyRecord> records = GameUtil.getList();
+		records.addAll(currencyObjectSeq.getAll());
+
+		o.setRecords(records);
+
+		return baseCommand(deviceId, "Add Currency Records ", "PFU0003", "UFP0003", o);
+
+	}
+
+	// private Map<Long,VitRecord> vitRecords=GameUtil.getMap();
+
+	private static class VitRecordObjectSeq extends ObjectSeq<Long, VitRecord> {
+	}
+
+	VitRecordObjectSeq vitRecordObjectSeq = new VitRecordObjectSeq();
+
+	@CliCommand(value = "vit create", help = " create currency record ")
+	public String createVitRecord(@CliOption(key = { "vit" }, mandatory = true, help = " module") int vit,
+			@CliOption(key = { "online" }, mandatory = true, help = " action") int online
+
+	) {
+
+		VitRecord o = G.o(VitRecord.class);
+		o.setClientId(getSeqId());
+		o.setOnline(online);
+		o.setVit(vit);
+		o.setOrderTime(CronUtil.getFormatedDate(new Date()));
+
+		return vitRecordObjectSeq.create(o.getClientId(), o);
+	}
+
+	@CliCommand(value = "vit delete", help = " delete vit record ")
+	public String createCurrencyRecord(@CliOption(key = { "id" }, mandatory = true, help = "client id") Long id) {
+
+		return vitRecordObjectSeq.delete(id);
+	}
+
+	@CliCommand(value = "vit clear", help = " clear vit record ")
+	public String clearVitRecords() {
+
+		return vitRecordObjectSeq.clear();
+	}
+
+	@CliCommand(value = "vit show", help = " show vit record ")
+	public String showVit() {
+		return vitRecordObjectSeq.show();
+	}
+
+	@CliCommand(value = "fish vit", help = " PFU0004(add currency list) ")
+	public String fishVit(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId) {
+
+		final PFU0004Request o = G.o(PFU0004Request.class);
+
+		List<VitRecord> records = GameUtil.getList();
+		records.addAll(vitRecordObjectSeq.getAll());
+
+		o.setRecords(records);
+
+		return baseCommand(deviceId, "Add Vit Records ", "PFU0004", "UFP0004", o);
+
+	}
+
+	@CliCommand(value = "fish data", help = " PFU0005(fish data list) ")
+	public String fishData(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "fishId" }, mandatory = true, help = "") String fishId,
+			@CliOption(key = { "level" }, mandatory = true, help = "", specifiedDefaultValue = "0") int level,
+			@CliOption(key = { "rodId" }, mandatory = false, help = "", specifiedDefaultValue = "") String rodId,
+			@CliOption(key = { "rodProps" }, mandatory = false, help = "", specifiedDefaultValue = "") String rodProps,
+			@CliOption(key = { "wheelId" }, mandatory = false, help = "", specifiedDefaultValue = "") String wheelId,
+			@CliOption(key = {
+					"wheelProps" }, mandatory = false, help = "", specifiedDefaultValue = "") String wheelProps,
+			@CliOption(key = { "lineId" }, mandatory = false, help = "", specifiedDefaultValue = "") String lineId,
+			@CliOption(key = { "lureId" }, mandatory = false, help = "", specifiedDefaultValue = "") String lureId,
+			@CliOption(key = { "drugId1" }, mandatory = false, help = "", specifiedDefaultValue = "") String drugId1,
+			@CliOption(key = { "drugId2" }, mandatory = false, help = "", specifiedDefaultValue = "") String drugId2,
+			@CliOption(key = { "drugId3" }, mandatory = false, help = "", specifiedDefaultValue = "") String drugId3,
+			@CliOption(key = {
+					"bigFishAddition" }, mandatory = false, help = "", specifiedDefaultValue = "") String bigFishAddition,
+			@CliOption(key = { "fishWeight" }, mandatory = true, help = "") float fishWeight,
+			@CliOption(key = { "fishRank" }, mandatory = true, help = "") int fishRank,
+			@CliOption(key = { "fishRare" }, mandatory = true, help = "") int fishRare,
+			@CliOption(key = {
+					"tensionTriggers" }, mandatory = false, help = "", specifiedDefaultValue = "0") int tensionTriggers,
+			@CliOption(key = {
+					"tensionUsed" }, mandatory = false, help = "", specifiedDefaultValue = "0") int tensionUsed,
+			@CliOption(key = {
+					"dragTriggers" }, mandatory = false, help = "", specifiedDefaultValue = "0") int dragTriggers,
+			@CliOption(key = { "dragUsed" }, mandatory = false, help = "", specifiedDefaultValue = "0") int dragUsed,
+			@CliOption(key = {
+					"fishDuration" }, mandatory = true, help = "", specifiedDefaultValue = "0") int fishDuration,
+			@CliOption(key = { "succeed" }, mandatory = true, help = "") int succeed
+
+	) {
+
+		final PFU0005Request o = G.o(PFU0005Request.class);
+		o.setBigFishAddition(bigFishAddition);
+		o.setDragTriggers(dragTriggers);
+		o.setDragUsed(dragUsed);
+		o.setDrugId1(drugId1);
+		o.setDrugId2(drugId2);
+		o.setDrugId3(drugId3);
+		o.setFishDuration(fishDuration);
+		o.setFishId(fishId);
+		o.setFishRank(fishRank);
+		o.setFishRare(fishRare);
+		o.setFishWeight(fishWeight);
+		o.setLevel(level);
+		o.setLineId(lineId);
+		o.setLureId(lureId);
+		o.setRodId(rodId);
+		o.setRodProps(rodProps);
+		o.setSucceed(succeed);
+		o.setTensionTriggers(tensionTriggers);
+		o.setTensionUsed(tensionTriggers);
+		o.setWheelId(wheelId);
+		o.setWheelProps(wheelProps);
+
+		return baseCommand(deviceId, "Add fish data ", "PFU0005", "UFP0005", o);
+
+	}
+
+	//
+	// Protocol Rank System.
+	//
+	//
+
+	public static enum FishRankTypes {
+		World(0), Friends(1);
+		private int type;
+
+		private FishRankTypes(int type) {
+			this.type = type;
+		}
+
+	}
+
+	@CliCommand(value = "fish rank", help = " PRS0001(fish rank list) ")
+	public String fishData(@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId,
+			@CliOption(key = { "fishId" }, mandatory = true, help = "") String fishId,
+			@CliOption(key = { "category" }, mandatory = true, help = "") FishRankTypes category) {
+
+		final PRS0001Request o = G.o(PRS0001Request.class);
+		o.setCategory(category.type);
+		o.setFishId(fishId);
+
+		return baseCommand(deviceId, "Fish Rank List ", "PRS0001", "SRP0001", o);
+	}
+
+	
+	@CliCommand(value = "payment order", help = " PP0001|PP0006(payment order ")
+	public String getOrder(
+			@CliOption(key = { "deviceId" }, mandatory = true, help = " device id") DeviceId deviceId
+			) {
+		final DeviceId id = deviceId;
+		executor.execute(new Runnable() {
+
+			public void run() {
+
+				try {
+					id.getWrapper().sendPaymentOrder();
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+		});
+
+		return " requet order: " + id.toString();
+	}
+
+}

@@ -1,0 +1,315 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.toyo</groupId>
+	<artifactId>fish-game</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>fish-game</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.6</java.version>
+		<aspectj.version>1.8.7</aspectj.version>
+		<spring.version>3.2.6.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.toyo</groupId>
+			<artifactId>fish-protocol-beans</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.toyo</groupId>
+			<artifactId>fish-remote-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>eclipselink</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+
+		<!-- aspect j -->
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${aspectj.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${aspectj.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.toyo</groupId>
+			<artifactId>fish-game</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.toyo</groupId>
+			<artifactId>fish-config</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+
+
+
+	<build>
+
+
+		<plugins>
+
+			<!-- AspectJ -->
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<!-- Modifying output directory of default compile because non-weaved 
+							classes must be stored in separate folder to not confuse ajc by reweaving 
+							already woven classes (which leads to to ajc error message like "bad weaverState.Kind: 
+							-115") -->
+						<id>default-compile</id>
+						<configuration>
+							<compilerArguments>
+								<d>${project.build.directory}/classes</d>
+							</compilerArguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<version>1.8</version>
+				<configuration>
+					<verbose>true</verbose>
+
+					<showWeaveInfo>true</showWeaveInfo>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<complianceLevel>${java.version}</complianceLevel>
+					<encoding>UTF-8</encoding>
+
+					<outxml>true</outxml>
+					<sources>
+						<source>
+							<basedir>src/main/java</basedir>
+							<includes>
+								<!-- <include>**/TransationAspect.java</include> -->
+								<include>**/*.aj</include>
+							</includes>
+							<!-- <excludes> <exclude>**/logging/*.aj</exclude> </excludes> -->
+						</source>
+					</sources>
+					<weaveDirectories>
+						<weaveDirectory>${project.build.directory}/classes</weaveDirectory>
+					</weaveDirectories>
+				</configuration>
+				<executions>
+					<execution>
+						<!-- Compile and weave aspects after all classes compiled by javac -->
+						<phase>process-classes</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjtools</artifactId>
+						<version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
+
+			</plugin>
+
+			<!-- multiple directory of sources. -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.9.1</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/src/main/java</source>
+								<!-- <source>${basedir}/src/main/commons</source> -->
+								<!-- 我们可以通过在这里添加多个source节点，来添加任意多个源文件夹 -->
+							</sources>
+						</configuration>
+					</execution>
+					<!-- <execution> <id>add-resource</id> <phase>generate-sources</phase> 
+						<goals> <goal>add-test-resource</goal> </goals> <configuration> <resources> 
+						<resource> <directory>${basedir} src/labs/resource </ directory > </resource> 
+						</resources> </configuration> </execution> -->
+
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>org.apache.camel.spring.Main</mainClass>
+							<classpathPrefix>lib/</classpathPrefix>
+							<addClasspath>true</addClasspath>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<version>2.4</version> <configuration> <descriptors> <descriptor>src/main/assembly/dist.xml</descriptor> 
+				</descriptors> </configuration> <executions> <execution> <id>make-assembly</id> 
+				<phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
+				</executions> </plugin> -->
+
+			<!-- release package. -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.8.1</version>
+				<configuration>
+					<repositoryLayout>flat</repositoryLayout>
+					<includeConfigurationDirectoryInClasspath>true</includeConfigurationDirectoryInClasspath>
+					<repositoryName>lib</repositoryName>
+					<daemons>
+
+						<daemon>
+							<id>fish-app</id>
+							<mainClass>com.toyo.fish.game.FishApp</mainClass>
+							<commandLineArguments>
+								<commandLineArgument>start</commandLineArgument>
+							</commandLineArguments>
+
+							<generatorConfigurations>
+								<generatorConfiguration>
+									<generator>jsw</generator>
+									<includes>
+
+										<include> macosx-universal-64</include>
+										<include>linux-x86-32</include>
+										<include>linux-x86-64</include>
+										<include>windows-x86-32</include>
+									</includes>
+								</generatorConfiguration>
+							</generatorConfigurations>
+
+							<platforms>
+								<platform>jsw</platform>
+							</platforms>
+
+							<jvmSettings>
+								<!-- 启动内存配置 -->
+								<initialMemorySize>2048</initialMemorySize>
+								<maxMemorySize>2048</maxMemorySize>
+								<maxStackSize>128</maxStackSize>
+								
+								<extraArguments>
+									<extraArgument>-server </extraArgument>
+									<extraArgument>-XX:MaxPermSize=64M</extraArgument>
+									<extraArgument>-XX:+AggressiveOpts</extraArgument>
+									<extraArgument>-XX:MaxDirectMemorySize=2G</extraArgument>
+									<!-- 远程JMX -->
+									<extraArgument>-Dcom.sun.management.jmxremote </extraArgument>
+									<extraArgument>-Dcom.sun.management.jmxremote.port=1984</extraArgument>
+									<extraArgument>-Dcom.sun.management.jmxremote.authenticate=false </extraArgument>
+									<extraArgument>-Dcom.sun.management.jmxremote.ssl=false </extraArgument>
+								</extraArguments>
+							</jvmSettings>
+						</daemon>
+					</daemons>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-jsw-scripts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>generate-daemons</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.3</version>
+				<configuration>
+					<show>private</show>
+					<nohelp>true</nohelp>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>so.heroin.maven.plugins</groupId>
+				<artifactId>deploy-maven-plugin</artifactId>
+				<version>1.0.0.0-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<id>install</id>
+						<phase>install</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<hostname>www.toyo.cool</hostname>
+					<username>developer</username>
+					<password>1qaz2wsx</password>
+					<port>22</port>
+					<remotePath>/home/developer/repos</remotePath>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+
+
+	</build>
+</project>

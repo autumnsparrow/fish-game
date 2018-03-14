@@ -1,0 +1,264 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-07-18 13:55:24
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-07-18 13:58:13
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 14:02:05
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 14:08:04
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 14:12:31
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 14:17:07
+project --topLevelPackage com.sky.allinpay --projectName allinpay
+jpa setup --provider ECLIPSELINK --database MYSQL 
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-18 14:19:04
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 14:19:38
+// [failed] entity jpa --class ~.domain.User --activeRecord false --testAutomatically 
+// [failed] field string --fieldName phone --unique --notNull --sizeMax 20
+// [failed] field string --fieldName phone --unique --notNull --sizeMax 20
+entity jpa --class ~.domain.AppUser --activeRecord false --testAutomatically 
+field string --fieldName phone --unique --notNull --sizeMax 20
+field string --fieldName password --notNull --sizeMax 50
+field date --fieldName createTime --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss" 
+field date --fieldName updateTime --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss" 
+field string --fieldName token --notNull --sizeMax 200
+
+entity jpa --class ~.domain.School --activeRecord false --testAutomatically 
+field string --fieldName briefName --sizeMax 50 --notNull 
+field string --fieldName name --sizeMax 200 
+field string --fieldName shcoolId --sizeMax 50 --notNull 
+field number --fieldName feeRadio --type java.lang.Integer
+
+entity jpa --class ~.domain.Student --activeRecord false --testAutomatically 
+field reference --fieldName schoold --type ~.domain.School
+field string --fieldName name --sizeMax 50
+field string --fieldName studentId --sizeMax 30
+field string --fieldName phone --sizeMax 20 --notNull 
+
+
+// [failed] field set --fieldName bills --type ~.domain.Bill
+entity jpa --class ~.domain.FeeItem
+field string --fieldName name --sizeMax 50 --notNull 
+field number --fieldName amount --type java.lang.Integer
+field number --fieldName feeId --type java.lang.Integer
+
+
+entity jpa --class ~.domain.Fee
+field reference --fieldName school --type ~.domain.School
+field number --fieldName feeId --notNull --type java.lang.Integer
+field set --fieldName feeItems --type ~.domain.FeeItem
+field date --fieldName startDate --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss" 
+field date --fieldName expireDate --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss" 
+
+
+entity jpa --class ~.domain.FeeInfo
+field reference --fieldName fee --type ~.domain.Fee
+field reference --fieldName student --type ~.domain.Student
+entity jpa --class ~.domain.Bill
+field string --fieldName orderId --notNull --sizeMax 50
+field number --fieldName amount --type java.lang.Integer
+field string --fieldName description --sizeMax 200
+field reference --fieldName feeInfo --type ~.domain.FeeInfo
+focus --class ~.domain.FeeInfo
+field number --fieldName status --type java.lang.Integer
+focus --class ~.domain.Student
+field set --fieldName bills --type ~.domain.Bill
+field set --fieldName feeInfos --type ~.domain.FeeInfo
+entity jpa --class ~.domain.Notice
+field number --fieldName noticeType --type java.lang.Integer
+field string --fieldName title --sizeMax  100
+field string --fieldName content --sizeMax 255
+field date --fieldName createTime --type java.util.Date --dateTimeFormatPattern "yyyy-MM-dd hh:mm:ss"
+repository jpa --interface ~.repository.AppUser --entity ~.domain.AppUser
+repository jpa --interface ~.repository.AppUserRepository --entity ~.domain.AppUser
+repository jpa --interface ~.repository.SchoolRepository --entity ~.domain.School
+repository jpa --interface ~.repository.NoticeRepository --entity ~.domain.Notice
+repository jpa --interface ~.repository.StudentRepository --entity ~.domain.Student
+repository jpa --interface ~.repository.BillRepository --entity ~.domain.Bill
+repository jpa --interface ~.repository.FeeInfoRepository --entity ~.domain.FeeInfo
+repository jpa --interface ~.repository.FeeRepository --entity ~.domain.Fee
+repository jpa --interface ~.repository.FeeItemRepository --entity ~.domain.FeeItem
+service type --interface ~.service.AppUserService --entity ~.domain.AppUser
+service type --interface ~.service.StudentService --entity ~.domain.Student
+service type --interface ~.service.NoticeService --entity ~.domain.Notice
+service type --interface ~.service.BillService --entity ~.domain.Bill
+service type --interface ~.service.FeeInfoService --entity ~.domain.FeeInfo
+service type --interface ~.service.SchoolService --entity ~.domain.School
+service type --interface ~.service.FeeService --entity ~.domain.Fee
+service type --interface ~.service.FeeItemService --entity ~.domain.FeeItem
+json all --deepSerialize
+web mvc json setup
+web mvc json all --package ~.web
+web mvc setup
+web mvc all --package ~.web
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-07-18 14:55:19
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-18 15:04:17
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 15:15:05
+focus --class ~.domain.FeeInfo
+field number --fieldName id --type java.lang.Integer  
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-18 16:11:05
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 16:18:34
+web mvc controller --class ~.web.MobileApplicationIntefaceController
+help
+// [failed] entity jpa --class ~.domain.AppUserResponse --activeRecord false 
+entity jpa --class ~.domain.AppUserResponse --activeRecord false 
+// [failed] field number --fieldName state --type java.lang.Integer
+field number --fieldName status --type java.lang.Integer
+field string --fieldName token --sizeMax 200
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-07-18 16:36:52
+help
+web mvc controller --class ~.mobile.inteface.ApplicationController
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-18 17:08:38
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 17:08:49
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-18 18:23:55
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-18 19:10:40
+focus ---class ~.repository.AppUserRepository
+// [failed] finder list --class ~.domain.AppUser
+// [failed] finder list --class ~.repository.AppUserRepository
+// [failed] finder list --class ~.repository.AppUserRepository
+// [failed] finder list --class ~.domain.AppUser
+// [failed] finder list --class ~.domain.AppUser --filter phone,password
+security setup
+help
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-07-18 20:45:04
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-07-18 20:45:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-07-21 11:02:29
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-21 12:59:47
+entity jpa --class ~.domain.TokenSequence --activeRecord false 
+repository jpa --interface ~.repository.TokenSequenceRepository --entity ~.domain.TokenSequence
+service type --interface ~.service.TokenSequenceService --entity ~.domain.TokenSequence
+field string --fieldName sequenceName --notNull --sizeMax 20
+field number --fieldName sequenceId --notNull --type java.lang.Long
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-07-21 17:19:21
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-21 17:31:56
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-21 17:32:06
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-21 19:06:21
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-21 19:06:33
+exit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-21 19:45:11
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-21 19:45:18
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-22 09:00:51
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-22 14:49:32
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-22 14:51:36
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-22 14:54:39
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-22 18:45:06
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-23 11:18:23
+entity jpa --class ~.domain.SchoolType --activeRecord false 
+repository jpa --interface ~.repository.SchoolTypeRepository --entity ~.domain.SchoolType
+service type --interface ~.service.SchoolTypeService --entity ~.domain.SchoolType
+focus --class ~.domain.School
+field reference --fieldName schoolType --type ~.domain.SchoolType
+focus --class ~.domain.SchoolType
+field number --fieldName schoolType --type java.lang.Integer
+field string --fieldName schoolTypeName --notNull --sizeMax 20
+web mvc all --package com.sky.allinpay.web
+focus --class ~.domain.Bill
+field reference --fieldName appuser --type ~.domain.AppUser
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-23 15:00:04
+web mvc all --package com.sky.allinpay.web
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-23 15:01:06
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-23 15:01:44
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-23 15:02:32
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-23 15:02:32
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-23 15:55:11
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-23 19:25:45
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-24 10:18:35
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-24 13:08:19
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-24 15:49:43
+web mvc finder all
+web mvc finder add --formBackingType ~.domain.FeeInfo --class ~.web.FeeInfoController
+focus --class ~.domain.FeeInfo
+finder list 
+find list --filter fee
+find list --filter fee.status
+find list --filter student
+find add --finderName findFeeInfoesByStudent
+web mvc finder all
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-24 17:09:28
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-24 17:13:31
+web mvc finder all
+web mvc finder all
+web mvc finder add --formBackingType ~.domain.FeeInfo --class ~.web.FeeInfoController
+web mvc finder add --formBackingType ~.domain.FeeInfo --class ~.web.FeeInfoController
+service type --interface ~.service.AppUserService --entity ~.domain.AppUser
+service type --interface ~.service.StudentService --entity ~.domain.Student
+service type --interface ~.service.NoticeService --entity ~.domain.Notice
+service type --interface ~.service.BillService --entity ~.domain.Bill
+service type --interface ~.service.FeeInfoService --entity ~.domain.FeeInfo
+service type --interface ~.service.SchoolService --entity ~.domain.School
+service type --interface ~.service.FeeService --entity ~.domain.Fee
+service type --interface ~.service.FeeItemService --entity ~.domain.FeeItem
+focus --class ~.domain.AppUser
+find list --filter phone
+finder add --finderName findAppUsersByPhoneEquals
+web mvc finder all
+finder list --filter token
+finder list --filter token,updatetime
+finder list --filter token,updatetime --depth 2
+finder list --filter token,updatetime --depth 1
+finder list --filter token,updateTime
+finder add findAppUsersByTokenEqualsAndUpdateTimeLessThan
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-24 18:50:59
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-24 18:54:30
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-24 18:54:49
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-24 19:35:35
+help
+help security
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-24 19:40:45
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-25 16:14:21
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-25 16:40:03
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-07-28 16:23:21
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-07-28 16:24:49
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-08-10 14:30:31
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-08-10 14:39:16
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-11-10 16:45:34
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-11-10 17:12:45
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-11-10 17:13:38
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-11-10 18:39:52
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-11-10 18:58:55
+help
+hint
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-11-10 19:18:22
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-11-10 19:25:52
+help json
+json all
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-10 19:27:45
+help
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-10 19:43:59
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-10 20:07:06
+// [failed] focus --class com.sky.mobile.handler.items.ItemRequest
+// [failed] focus --class com.sky.mobile.handler.items.ItemRequest
+// [failed] focus --class com.sky.mobile.handler.items
+// [failed] focus --class com.sky.mobile.handler.items
+class --class com.sky.mobile.handler.items.ItemRequest
+class --class com.sky.mobile.handler.items.ItemResponse
+// [failed] focus --class com.sky.mobile.handler.items.ItemRequest
+exit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-10 20:10:38
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-11-10 20:10:48
+// [failed] focus --class ~.handler.items.ItemRequest
+class --class ~.handler.items.ItemRequest
+class --class ~.handler.item.Item
+json add
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-11-10 20:13:01
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-11-10 20:19:20
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2014-11-18 13:55:01
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2014-11-18 19:52:35
